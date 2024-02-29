@@ -1,15 +1,15 @@
 import { ChevronUp, World } from '@/app/_icons'
 import React from 'react'
 
-export const SelectLanguage = () => {
+export const SelectLanguage = ({ hideTitle }: { hideTitle: boolean }) => {
     return (
-        <div className='flex flex-row gap-2 items-center justify-between hover:bg-black cursor-pointer p-2 rounded-app'>
+        <div className={`flex flex-row gap-2 items-center  hover:bg-black cursor-pointer  rounded-app ${!hideTitle ? 'justify-center aspect-square p-1' : 'justify-between p-2'}`}>
 
             <div className='flex flex-row gap-2 items-center'>
                 <World width={20} height={20} />
-                <span>زبان</span>
+                {hideTitle && <span>زبان</span>}
             </div>
-            <ChevronUp  width={12} height={12}/>
+            {hideTitle && <ChevronUp width={12} height={12} />}
         </div>
     )
 }
