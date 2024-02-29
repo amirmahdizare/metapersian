@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { routes } from './routes'
 import { SelectTheme } from './components/SelectTheme'
 import { SelectLanguage } from './components/SelectLanguage'
+import { ChevronUp, Login } from '@/app/_icons'
 
 export const SideMenu = () => {
   return (
@@ -22,8 +23,8 @@ export const SideMenu = () => {
           </div>
         </div>
 
-        <div className='rounded-[50%] bg-black w-8 h-8 shrink-0 flex flex-row justify-center items-center'>
-          -
+        <div className='rounded-[50%] bg-black w-8 h-8 shrink-0 flex flex-row justify-center items-center cursor-pointer'>
+          <ChevronUp className='rotate-90' width={12} height={12} />
         </div>
 
       </div>
@@ -41,8 +42,8 @@ export const SideMenu = () => {
 
       <SelectLanguage />
 
-      <div className='bg-yellow-400 flex justify-between flex-row rounded-app p-2 text-black'>
-        <span>/*</span>
+      <div className='bg-yellow-400 flex justify-between flex-row rounded-app p-2 px-4 items-center text-black'>
+        <Login width={20} height={20} />
 
         <span>ورود</span>
 
@@ -50,7 +51,7 @@ export const SideMenu = () => {
 
       <div className='bg-gray-600 w-full h-[1px]'></div>
 
-     <SelectTheme/>
+      <SelectTheme />
 
     </div>
   )
