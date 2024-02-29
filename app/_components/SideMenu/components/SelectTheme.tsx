@@ -9,8 +9,8 @@ export const SelectTheme = () => {
     
     return (
         <div className='bg-black p-1 rounded-app-curve flex flex-row'>
-            <div className={`${defClassName} ${theme=='dark' ? 'bg-light-menu-bg' : ''}`} onClick={()=>setTheme('dark')}>تیره</div>
-            <div className={`${defClassName} ${theme=='light' ? 'bg-light-menu-bg' : ''}`} onClick={()=>setTheme('light')}>روشن</div>
+            <div className={`${defClassName} ${theme=='dark' ? 'bg-dark-on-bg' : ''}`} onClick={()=>setTheme('dark')}>تیره</div>
+            <div className={`${defClassName} ${theme=='light' ? 'bg-dark-on-bg' : ''}`} onClick={()=>setTheme('light')}>روشن</div>
 
         </div>
     )

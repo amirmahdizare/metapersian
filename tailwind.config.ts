@@ -15,9 +15,19 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors:{
-        'light-content-bg':'#080807',
-        'light-menu-bg':'#1A1A18',
-        'light-text-gray':'#868B90'
+        'dark-active-btn':'#FFC700',
+        'dark-off-btn':'#C9C9C9',
+        'dark-Font':'#E1E1E1',
+        'dark-bg':'#000000',
+        'dark-tooltip':'#868B90',
+        'dark-hover':'#FDD136',
+        'dark-error':'#C30000',
+        'dark-error-input':'#ff00000',
+        'dark-on-bg':'#1A1A18',
+        'dark-success':'#00966D',
+        'dark-font-success':'#18C08F',
+        'dark-link':'#2a85ff'
+
       },
       borderRadius:{
         'app':'10px',

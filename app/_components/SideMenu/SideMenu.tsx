@@ -7,7 +7,7 @@ import { SelectLanguage } from './components/SelectLanguage'
 
 export const SideMenu = () => {
   return (
-    <div className='bg-light-menu-bg text-light-text-gray p-5 rounded-app min-w-[300px] gap-4 flex flex-col'>
+    <div className='bg-dark-on-bg text-dark-tooltip p-5 rounded-app min-w-[300px] gap-4 flex flex-col'>
 
       <div className='flex flex-row justify-between items-center gap-2'>
 
