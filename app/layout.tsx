@@ -4,7 +4,7 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Persian Meta",
+  title: "Metaverse Rang",
 };
 
 export default function RootLayout({
