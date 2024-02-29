@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { AzarMehr, AzarMehrNumber } from "./_fonts/AzarMehr";
 
 
 export const metadata: Metadata = {
@@ -14,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className="container max-w-[1920px]">{children}</body>
+      <body className={`${AzarMehr.className} ${AzarMehrNumber.className} font-medium text-[14px] container max-w-[1920px]`}>{children}</body>
     </html>
   );
 }
