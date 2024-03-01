@@ -1,10 +1,13 @@
 import Image from "next/image";
 import { SideMenu } from "./_components/SideMenu/SideMenu";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-row p-1">
-      <SideMenu />
+    <main className="flex flex-row p-1 justify-center items-center h-screen">
+
+      <Link href={'/levels'} >رفتن به صفحه سطوح</Link>
+      {/* <SideMenu /> */}
     </main>
   );
 }
