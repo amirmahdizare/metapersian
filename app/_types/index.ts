@@ -10,3 +10,9 @@ export interface FooterSymbolType {
     img: StaticImageData,
     link: string
 }
+
+export interface FeatureType {
+    img:StaticImageData,
+    title:string,
+    description:string
+}
