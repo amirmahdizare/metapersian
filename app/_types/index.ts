@@ -3,5 +3,10 @@ import { StaticImageData } from "next/image";
 export interface MenuItemType {
     faTitle: string,
     img: StaticImageData,
-    route:string
+    route: string
+}
+
+export interface FooterSymbolType {
+    img: StaticImageData,
+    link: string
 }
