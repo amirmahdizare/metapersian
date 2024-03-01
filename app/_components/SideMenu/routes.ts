@@ -14,56 +14,67 @@ import miniester from '@/app/_images/menuImages/minister-baguette.png'
 export const routes: Array<MenuItemType> = [
     {
         faTitle: 'شهروند',
+        route:'citizen',
         img: citizen
     },
     {
         faTitle: 'خبرنگار',
-        img: reporter
+        img: reporter,
+        route:'reporter'
     },
     {
         faTitle:'مشارکت کننده',
-        img:participation
+        img:participation,
+        route:'participation'
     },
     {
         faTitle:'توسعه دهنده',
-        img:developer
+        img:developer,
+        route:'developer'
     }
     ,
     {
         faTitle:'بازرس',
-        img:inspector
+        img:inspector,
+        route:'inspector'
     },
 
     {
         faTitle:'تاجر',
-        img:bussiness
+        img:bussiness,
+        route:'bussiness'
     },
 
 
     {
         faTitle:'وکیل',
-        img:lawyer
+        img:lawyer,
+        route:'lawyer'
     },
 
     {
         faTitle:'شورای شهر',
-        img:cityCouncil
+        img:cityCouncil,
+        route:'citycouncil'
     },
 
     {
         faTitle:'شهردار',
-        img:mayor
+        img:mayor,
+        route:'mayor'
     },
 
 
     {
         faTitle:'استاندار',
-        img:governer
+        img:governer,
+        route:'governer'
     },
 
     {
         faTitle:'وزیر',
-        img:miniester
+        img:miniester,
+        route:'miniester'
     },
 
 ]

@@ -7,13 +7,18 @@ import { routes } from './routes'
 import { SelectTheme } from './components/SelectTheme'
 import { SelectLanguage } from './components/SelectLanguage'
 import { ChevronUp, Login, Menu } from '@/app/_icons'
+import Link from 'next/link'
+import { useSelectedLayoutSegment } from 'next/navigation'
 
 export const SideMenu = () => {
 
   const [expaned, setExpanded] = useState<boolean>(false)
 
+
+  const segment = useSelectedLayoutSegment()
+
   return (
-    <div className={`bg-dark-on-bg text-dark-tooltip  rounded-app relative gap-4 flex transition-all duration-400 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 ' : 'max-w-[60px] lg:max-w-[100px] overflow-hidden p-5 justify-center items-center'}`}>
+    <div className={`bg-dark-on-bg text-dark-tooltip  h-fit rounded-app relative gap-4 flex transition-all duration-400 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 ' : 'max-w-[60px] lg:max-w-[100px] overflow-hidden p-5 justify-center items-center'}`}>
 
       {!expaned && <Menu width={20} height={20} />}
 
@@ -39,11 +44,11 @@ export const SideMenu = () => {
       <div className='flex flex-col h-fit '>
 
 
-        {routes.map(route => <div className={`flex flex-row gap-2.5  items-center rounded-app hover:bg-black   transition-all duration-200 cursor-pointer p-2.5  `}>
+        {routes.map(route => <Link href={`/levels/${route.route}`}  className={`flex flex-row gap-2.5  items-center rounded-app hover:bg-black   transition-all duration-200 cursor-pointer p-2.5 ${segment ==route.route  ? 'bg-black' : ''} `}>
           <Image src={route.img} height={35} width={27.5} alt={route.faTitle} />
           {expaned && <span>{route.faTitle}</span>}
 
-        </div>)}
+        </Link>)}
 
       </div>
 
