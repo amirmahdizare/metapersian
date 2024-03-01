@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SideMenu } from "../_components/SideMenu/SideMenu";
+import { SideMenu } from "./_components/SideMenu/SideMenu";
 
 
 export default function RootLayout({
