@@ -1,7 +1,7 @@
 import { Check, Close } from '@/app/_icons'
 import React from 'react'
 
-export const Detailtem = ({ title, value }: { title: string, value: any }) => {
+export const DetailItem = ({ title, value }: { title: string, value: any }) => {
 
     const generateValue = () => {
         if (typeof value == 'boolean' && !value)
