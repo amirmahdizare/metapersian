@@ -1,6 +1,6 @@
 import React from 'react'
 import { persmissionData } from './data.mock'
-import { Detailtem } from '@/app/_components/Detailtem/Detailtem'
+import { DetailItem } from '@/app/_components'
 
 export default function page() {
     return (
@@ -8,7 +8,7 @@ export default function page() {
 
 
             {persmissionData.items.sort((a, b) => (a?.colNumber ?? 0) > (b?.colNumber ?? 0) ? -1 : 1).map(item => <div className={`col-span-2 lg:col-span-1 `}>
-                <Detailtem {...item} />
+                <DetailItem {...item} />
             </div>)}
 
         </div>

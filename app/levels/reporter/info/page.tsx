@@ -1,6 +1,6 @@
 import React from 'react'
 import { infoData } from './data.mock'
-import { Detailtem } from '@/app/_components/Detailtem/Detailtem'
+import { DetailItem } from '@/app/_components'
 
 export default function page() {
     return (
@@ -17,7 +17,7 @@ export default function page() {
 
 
                 {infoData.items.sort((a, b) => (a?.span ?? 0) > (b?.span ?? 0) ? 1 : -1).map(item => <div className={`${item.span == 2 ? 'col-span-2' : 'col-span-2 lg:col-span-1'} `}>
-                    <Detailtem {...item} />
+                    <DetailItem {...item} />
                 </div>)}
 
             </div>

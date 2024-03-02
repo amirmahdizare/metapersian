@@ -1,5 +1,5 @@
 import React from 'react'
-import { Detailtem } from '@/app/_components/Detailtem/Detailtem'
+import { DetailItem } from '@/app/_components'
 import { rewards } from './data.mock'
 
 export default function page() {
@@ -8,7 +8,7 @@ export default function page() {
 
 
             {rewards.items.sort((a, b) => (a?.colNumber ?? 0) > (b?.colNumber ?? 0) ? -1 : 1).map(item => <div className={`col-span-2 lg:col-span-1 `}>
-                <Detailtem {...item} />
+                <DetailItem {...item} />
             </div>)}
 
         </div>
