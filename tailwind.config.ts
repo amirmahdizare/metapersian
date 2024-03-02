@@ -26,7 +26,7 @@ const config: Config = {
         'dark-on-bg':'#1A1A18',
         'dark-success':'#00966D',
         'dark-font-success':'#18C08F',
-        'dark-link':'#2a85ff'
+        'dark-link':'#2a85ff',
 
       },
       borderRadius:{

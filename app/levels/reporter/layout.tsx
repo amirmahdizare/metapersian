@@ -29,13 +29,14 @@ export default function RootLayout({
                 <Link href={'#'} className="p-3 rounded-app bg-[#1A1A18] text-gray-400">لیست دریافت کنندگان</Link>
             </div>
 
-            <div className="bg-dark-on-bg rounded-app  flex justify-evenly flex-row gap-4 w-full text-[#868B90] overflow-auto">
+            <div className="bg-dark-on-bg rounded-app  flex justify-evenly  flex-row gap-4 w-full text-[#868B90] overflow-auto">
                 <ButtonLink title="اطلاعات اولیه سطح"  link="/info" />
                 <ButtonLink title="مجوز ها و دسترسی ها" link="/permission" />
                 <ButtonLink title="نگین سطح"  link="/gem" />
                 <ButtonLink title="هدیه همراه"  link="/gift" />
                 <ButtonLink title="پاداش رسیدن به سطح" link="/reward" />
             </div>
+            
             {children}
         </div>
     );
