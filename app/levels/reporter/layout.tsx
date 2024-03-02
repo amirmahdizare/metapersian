@@ -35,11 +35,6 @@ export default function RootLayout({
                 <ButtonLink title="نگین سطح"  link="/gem" />
                 <ButtonLink title="هدیه همراه"  link="/gift" />
                 <ButtonLink title="پاداش رسیدن به سطح" link="/reward" />
-                {/* <Link href={'/'}>اطلاعات اولیه سطح</Link>
-                <Link href={'/'}>مجوز ها و دسترسی ها</Link>
-                <Link href={'/'}>نگین سطح</Link>
-                <Link href={'/'}>هدیه همراه</Link>
-                <Link href={'/'}>پاداش رسیدن به سطح</Link> */}
             </div>
             {children}
         </div>
