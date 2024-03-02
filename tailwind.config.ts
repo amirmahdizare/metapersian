@@ -27,6 +27,7 @@ const config: Config = {
         'dark-success':'#00966D',
         'dark-font-success':'#18C08F',
         'dark-link':'#2a85ff',
+        'dark-tex-gray':'#C4C4C4'
 
       },
       borderRadius:{
