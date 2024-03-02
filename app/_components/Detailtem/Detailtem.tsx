@@ -5,9 +5,9 @@ export const Detailtem = ({ title, value }: { title: string, value: any }) => {
 
     const generateValue = () => {
         if (typeof value == 'boolean' && !value)
-            return <Close width={25} height={25} />
+            return <Close width={20} height={20} className='text-red-500' />
         else if (typeof value == 'boolean' && value)
-            return <Check width={25} height={25} />
+            return <Check width={25} height={25} className='text-green-500' />
         else
             return <span className='text-dark-tex-gray'>{value}</span>
 
