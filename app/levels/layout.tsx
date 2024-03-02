@@ -12,7 +12,7 @@ export default function RootLayout({
 
 
     return (
-        <div className="flex flex-row gap-2 bg-black h-full p-2 justify-center">
+        <div className="flex flex-row gap-8 bg-black h-full p-6 justify-center ">
 
             <SideMenu />
 
