@@ -20,7 +20,7 @@ export const SideMenu = () => {
   return (
     <div className={`bg-dark-on-bg text-dark-tooltip text-[16px] absolute right-4 lg:right-0  h-fit rounded-app lg:relative gap-4 flex transition-all duration-400 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 ' : 'max-w-[60px] lg:max-w-[100px] overflow-hidden p-5 justify-center items-center'}`}>
 
-      {!expaned && <Menu width={20} height={20} />}
+      {!expaned && <Menu width={20} height={20} className='cursor-pointer' onClick={() => setExpanded(!expaned)} />}
 
       <div className='flex flex-row justify-between items-center gap-8'>
 
@@ -44,7 +44,7 @@ export const SideMenu = () => {
       <div className='flex flex-col h-fit '>
 
 
-        {routes.map(route => <Link href={`/levels/${route.route}`}  className={`flex flex-row gap-2.5  items-center rounded-app hover:bg-black   transition-all duration-200 cursor-pointer p-2.5 ${segment ==route.route  ? 'bg-black' : ''} `}>
+        {routes.map(route => <Link href={`/levels/${route.route}`} className={`flex flex-row gap-2.5  items-center rounded-app hover:bg-black   transition-all duration-200 cursor-pointer p-2.5 ${segment == route.route ? 'bg-black' : ''} `}>
           <Image src={route.img} height={35} width={27.5} alt={route.faTitle} />
           {expaned && <span>{route.faTitle}</span>}
 
