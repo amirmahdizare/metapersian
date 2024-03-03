@@ -16,8 +16,8 @@ export default function RootLayout({
 
   
   return (
-    <html lang="en" dir="rtl">
-      <body className={` ${vazir.className} font-medium text-[14px] container max-w-[1920px]`}>{children}</body>
+    <html lang="en" dir="rtl" className="text-[12px] lg:text-[16px]">
+      <body className={` ${vazir.className} font-medium  t container max-w-[1920px]`}>{children}</body>
     </html>
   );
 }
