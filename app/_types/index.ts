@@ -12,7 +12,12 @@ export interface FooterSymbolType {
 }
 
 export interface FeatureType {
-    img:StaticImageData,
-    title:string,
-    description:string
+    img: StaticImageData,
+    title: string,
+    description: string
+}
+
+export interface FooterLogoType {
+    img: StaticImageData,
+    link: string
 }
