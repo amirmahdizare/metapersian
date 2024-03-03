@@ -18,7 +18,7 @@ export const SideMenu = () => {
   const segment = useSelectedLayoutSegment()
 
   return (
-    <div className={`bg-dark-on-bg text-dark-tooltip text-[16px] h-fit rounded-app relative gap-4 flex transition-all duration-400 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 ' : 'max-w-[60px] lg:max-w-[100px] overflow-hidden p-5 justify-center items-center'}`}>
+    <div className={`bg-dark-on-bg text-dark-tooltip text-[16px] absolute right-4 lg:right-0  h-fit rounded-app lg:relative gap-4 flex transition-all duration-400 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 ' : 'max-w-[60px] lg:max-w-[100px] overflow-hidden p-5 justify-center items-center'}`}>
 
       {!expaned && <Menu width={20} height={20} />}
 

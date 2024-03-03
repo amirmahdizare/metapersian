@@ -24,12 +24,12 @@ export default function RootLayout({
 
     return (
         <div className="flex flex-col gap-6 bg-[#080807] w-full box-border p-8  rounded-app flex-1  ">
-            <div className="flex flex-row gap-2 justify-between">
+            <div className="flex flex-row gap-2 justify-end lg:justify-between">
                 <span className="text-2xl font-bold text-[#F1F3F5]">سطح خبرنگار یک</span>
-                <Link href={'#'} className="p-3 rounded-app bg-[#1A1A18] text-gray-400">لیست دریافت کنندگان</Link>
+                <Link href={'#'} className="p-3 rounded-app bg-[#1A1A18] text-gray-400 lg:block hidden">لیست دریافت کنندگان</Link>
             </div>
 
-            <div className="bg-dark-on-bg rounded-app  flex justify-evenly  flex-row gap-4 w-full text-[#868B90] overflow-auto">
+            <div className="bg-dark-on-bg rounded-app  flex justify-evenly whitespace-nowrap  flex-row gap-4 w-full text-[#868B90] overflow-auto">
                 <ButtonLink title="اطلاعات اولیه سطح" link="/info" />
                 <ButtonLink title="مجوز ها و دسترسی ها" link="/permissions" />
                 <ButtonLink title="نگین سطح" link="/gem" />
