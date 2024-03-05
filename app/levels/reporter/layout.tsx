@@ -1,7 +1,6 @@
 'use client'
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { TabSelector } from "./components/TabSelector";
 
 
@@ -10,10 +9,6 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-
-
-    const pathname = usePathname()
-
 
 
     return (
