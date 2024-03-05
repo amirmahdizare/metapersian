@@ -24,7 +24,6 @@ export default function page() {
 
 
 
-                    {/* <div className='w-full bg-dark-on-bg h-1'></div> */}
                     <div className='grid grid-cols-2 gap-2'>
                         {Object.values(rewards.items.reduce<{ [key: string]: Array<{ title: string, value: any, col: number, span?: number }> }>((pv, cv) => {
                             return ({ ...pv, [cv.colNumber]: [...(pv?.[cv.colNumber] ?? []), cv] })
