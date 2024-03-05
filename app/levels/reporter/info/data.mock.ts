@@ -6,65 +6,78 @@ export const infoData = {
     items: [
         {
             title: 'امتیاز مورد نیاز',
-            value: '1000'
+            value: '1000',
+            col:1
         },
         {
             title: 'رتبه سطح',
-            value: '1'
+            value: '1',
+            col:1
         },
         {
             title: 'تعداد زیرشاخه',
-            value: '5'
+            value: '5',
+            col:1
         },
         {
             title: 'تاریخ ایجاد سطح',
-            value: '1401/10/10'
+            value: '1401/10/10',
+            col:1
         },
         {
             title: 'فونت مورد استفاده فارسی',
-            value: 'LMN Alex Normal'
+            value: 'LMN Alex Normal',
+            col:1
         },
 
         {
             title: 'فونت مورد اسفتاده انگلیسی',
-            value: 'Bell MT Italic.010'
+            value: 'Bell MT Italic.010',
+            col:1
         },
 
         {
             title: 'رنگ های مورد استفاده',
             value: '#092003 , #CCC800 , #1D1D1D , #FF9D2F , #9C9C9C',
-            span:2
+            span:2,
+            col:3
         },
         {
             title: 'حجم فایل مدل سطح',
-            value: '2.32 MB'
+            value: '2.32 MB',
+            col:2
         },
 
         {
             title: 'تعداد پوینت استفاده شده در مدل سطح',
-            value: '56947'
+            value: '56947',
+            col:2
         },
 
         {
             title: 'تعداد خطوط مدل سطح:',
-            value: '107770'
+            value: '107770',
+            col:2
         },
 
 
         {
             title: 'انیمیشن',
-            value: 'ندارد'
+            value: 'ندارد',
+            col:2
         },
         
 
         {
             title: 'طراح سطح',
-            value: 'HM-2000001'
+            value: 'HM-2000001',
+            col:2
         },
     
         {
             title: 'طراح مدل سه بعدی',
-            value: 'HM-2000001'
+            value: 'HM-2000001',
+            col:2
         },
 
     ]
