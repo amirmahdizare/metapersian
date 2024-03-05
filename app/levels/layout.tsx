@@ -17,7 +17,7 @@ export default function RootLayout({
 
             <SideMenu />
 
-            <div className="flex flex-col gap-8 flex-1 items-center w-full max-w-[1400px]">
+            <div className="flex flex-col gap-8 flex-1 items-start w-full max-w-[1400px]">
                 {children}
                 <Features />
                 <FooterSymbols />

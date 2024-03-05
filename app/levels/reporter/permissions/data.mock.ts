@@ -55,6 +55,11 @@ export const persmissionData = {
         },
 
         {
+            title: 'قابلیت ثبت موقعیت های عمومی سطح',
+            value: false,
+            colNumber: 2
+        },
+        {
             title: 'دسترسی به بخش پاسخ دهی به سوالات شهروندان',
             value: false,
             colNumber: 2

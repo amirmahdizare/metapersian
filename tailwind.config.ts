@@ -33,6 +33,7 @@ const config: Config = {
       },
       borderRadius: {
         'app': '10px',
+        'app2': '20px',
         'app-curve': '100px'
       },
       boxShadow: {
