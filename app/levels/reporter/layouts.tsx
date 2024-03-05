@@ -19,7 +19,7 @@ export default function RootLayout({
             </div>
 
             <TabSelector />
-            <div className="text-xl">
+            <div className="">
                 {children}
             </div>
         </div>
