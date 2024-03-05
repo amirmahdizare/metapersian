@@ -8,9 +8,7 @@ import { ReporterName } from '../components/ReporterName'
 
 export default function page() {
 
-    console.log(infoData.items.reduce<{ [key: string]: Array<{ title: string, value: any }> }>((pv, cv) => {
-        return ({ ...pv, [cv.col]: [...(pv?.[cv.col] ?? []), cv] })
-    }, {}))
+
     return (
         <div className='grid grid-cols-3 gap-4 rounded-app bg-dark-section-color p-4'>
 
