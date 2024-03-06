@@ -5,6 +5,7 @@ import { TabSelector } from '../components/TabSelector'
 import { ButtonList } from '../components/ButtonList'
 import { SideBox } from './SideBox'
 import { ReporterName } from '../components/ReporterName'
+import { PopUpDescription } from '../../_components/PopUpDescription/PopUpDescription'
 
 export default function page() {
 
@@ -25,19 +26,24 @@ export default function page() {
 
                 <div className='flex flex-col gap-4 text-xl'>
 
+                    <div className='lg:flex flex-col gap-2 hidden'>
+                        <span className='text-white'>توضیحات:</span>
 
-                    <span className='text-white'>توضیحات:</span>
+                        <p className='text-gray-300 leading-8'>
+                            {infoData.desc}
+                        </p>
+                    </div>
 
-                    <p className='text-gray-300 leading-8'>
-                        {infoData.desc}
-                    </p>
+                    <PopUpDescription description={infoData.desc} >
+                        <ButtonList/>
+                    </PopUpDescription>
 
 
                     <div className='w-full bg-dark-on-bg h-1'></div>
                     <div className='grid grid-cols-2 gap-2'>
                         {Object.values(infoData.items.reduce<{ [key: string]: Array<{ title: string, value: any, col: number, span?: number }> }>((pv, cv) => {
                             return ({ ...pv, [cv.col]: [...(pv?.[cv.col] ?? []), cv] })
-                        }, {})).map(item => <div className={`flex flex-col ${item.findIndex(i => i.span == 2)!=-1 ? 'col-span-2' : 'col-span-2 lg:col-span-1'}  `}>
+                        }, {})).map(item => <div className={`flex flex-col ${item.findIndex(i => i.span == 2) != -1 ? 'col-span-2' : 'col-span-2 lg:col-span-1'}  `}>
                             {item?.map(i => <DetailItem {...i} />)}
                         </div>)}
 

@@ -1,0 +1,31 @@
+'use client'
+import { Close } from '@/app/_icons'
+import React, { ReactNode, useState } from 'react'
+
+export const PopUpDescription = ({ description, children }: { description: string, children?: ReactNode }) => {
+
+    const [open, setOpen] = useState<boolean>(false)
+
+    return (
+        <div className='flex flex-col gap-4 items-start lg:hidden'>
+            <span className='text-white'>توضیحات:</span>
+            <p className='line-clamp-6 text-ellipsis overflow-hidden text-white'>{description}</p>
+
+            <div className='flex flex-row items-center w-full gap-2  justify-between'>
+                <a className='text-blue-600' onClick={() => setOpen(true)}>مشاهده بیشتر</a>
+                {children}
+            </div>
+
+            {open && <div className='fixed top-0 left-0 backdrop-brightness-[25%] p-4 h-screen w-screen'>
+                <div className='rounded-app border-gray-400 p-8 flex flex-col gap-4 max-w-screen-sm border overflow-auto bg-dark-on-bg text-gray-400'>
+                    <div className='flex flex-row gap-2 justify-between'>
+                        <span className='text-2xl'>توضیحات :</span>
+                        <Close className='text-gray-400 cursor-pointer' width={17} height={17} onClick={()=>setOpen(false)} />
+                    </div>
+                    <p className='leading-8'>{description}</p>
+                </div>
+            </div>}
+
+        </div>
+    )
+}
