@@ -10,15 +10,18 @@ import { ChevronUp, Login, Menu } from '@/app/_icons'
 import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
 
-export const SideMenu = () => {
+export const SideMenu = ({ isMobile }: { isMobile?: boolean }) => {
 
   const [expaned, setExpanded] = useState<boolean>(false)
 
 
   const segment = useSelectedLayoutSegment()
 
+  if (isMobile && !expaned)
+    return <Menu className='cursor-pointer text-white' width={20} height={20} onClick={() => setExpanded(true)} />
+
   return (
-    <div className={`bg-dark-on-bg text-dark-tooltip text-[16px] absolute right-4 lg:right-0  h-fit rounded-app lg:relative gap-4 flex transition-all duration-400 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 ' : 'max-w-[60px] lg:max-w-[100px] overflow -hidden p-5 justify-center items-center'}`}>
+    <div className={`bg-dark-on-bg ${isMobile ? 'lg:hidden' : ''} backdrop-brightness-50 text-dark-tooltip text-[16px] absolute right-4 lg:right-0  h-fit rounded-app lg:relative gap-4 flex transition-all duration-400 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 ' : 'max-w-[60px] lg:max-w-[100px] overflow -hidden p-5  justify-center items-center'}`}>
 
       {!expaned && <Menu width={20} height={20} className='cursor-pointer' onClick={() => setExpanded(!expaned)} />}
 
