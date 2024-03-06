@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export const FooterSymbols = () => {
     return (
-        <div className='flex flex-row gap-4 bg-dark-on-bg p-2 rounded-app flex-wrap justify-center'>
+        <div className='flex flex-row gap-4 bg-dark-on-bg p-2 rounded-app flex-wrap justify-evenly w-full'>
 
 
             {footerSymbols.reverse().map(item => <Link href={item.link} className='aspect-square relative  w-[30px] lg:w-[55px]'>
