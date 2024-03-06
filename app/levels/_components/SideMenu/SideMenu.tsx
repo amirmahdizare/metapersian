@@ -18,7 +18,7 @@ export const SideMenu = () => {
   const segment = useSelectedLayoutSegment()
 
   return (
-    <div className={`bg-dark-on-bg text-dark-tooltip text-[16px] absolute right-4 lg:right-0  h-fit rounded-app lg:relative gap-4 flex transition-all duration-400 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 ' : 'max-w-[60px] lg:max-w-[100px] overflow-hidden p-5 justify-center items-center'}`}>
+    <div className={`bg-dark-on-bg text-dark-tooltip text-[16px] absolute right-4 lg:right-0  h-fit rounded-app lg:relative gap-4 flex transition-all duration-400 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 ' : 'max-w-[60px] lg:max-w-[100px] overflow -hidden p-5 justify-center items-center'}`}>
 
       {!expaned && <Menu width={20} height={20} className='cursor-pointer' onClick={() => setExpanded(!expaned)} />}
 
@@ -35,7 +35,7 @@ export const SideMenu = () => {
           </div>}
         </div>
 
-        <div className={`rounded-[50%]  w-8 h-8 shrink-0 flex flex-row justify-center items-center cursor-pointer text-dark-Font ${expaned ? 'bg-black' : 'fixed right-[100px] top-8 z-40 bg-dark-on-bg'}`} onClick={() => setExpanded(!expaned)}>
+        <div className={`rounded-[50%]  w-8 h-8 shrink-0 flex flex-row justify-center items-center cursor-pointer text-dark-Font ${expaned ? 'bg-black' : 'absolute right-[100px] top-8 z-40 bg-dark-on-bg'}`} onClick={() => setExpanded(!expaned)}>
           <ChevronUp className={`rotate-90 `} width={12} height={12} />
         </div>
 

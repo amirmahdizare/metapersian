@@ -13,7 +13,7 @@ export default function RootLayout({
 
 
     return (
-        <div className="flex flex-row gap-8 bg-black  p-6 justify-center ">
+        <div className="flex flex-row gap-8 lg:gap-14 xl:gap-16 bg-black  p-6 justify-center ">
 
             <SideMenu />
 
