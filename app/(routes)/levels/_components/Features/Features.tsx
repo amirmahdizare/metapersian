@@ -6,10 +6,10 @@ export const Features = () => {
     return (
         // box-shadow: 2px 2px 20.700000762939453px 0px rgba(245, 245, 245, 0.3);
 
-        <div className='flex flex-col lg:flex-row gap-24 lg:gap-16 justify-around mt-8 lg:mt-16'>
-            {features.map(item => <div key={item.title} className='flex flex-col  justify-center items-center gap-4 p-8 pt-20 rounded-app flex-1 bg-[#080807] duration-150 transition-all text-dark-Font top-0 hover:top-4 hover:border hover:border-yellow-500 hover:shadow-card  hov er:sha dow relative'>
-                <div className=' w-[80px] lg:w-[120px] aspect-square rounded-app-curve bg-dark-on-bg p-2 text-center relati ve absolute -top-1/2 translate-y-1/2'>
-                    <Image  src={item.img} alt={item.title} fill />
+        <div className='flex flex-col lg:flex-row gap-24 lg:gap-16 justify-around mt-12 lg:mt-24 mb-7  '>
+            {features.map(item => <div key={item.title} className='flex flex-col  justify-center items-center gap-4 p-8 lg:pt-24 pt-28 rounded-app flex-1 bg-[#080807] duration-150 transition-all text-dark-Font top-0 hover:top-8 hover: border border-black hover:border-yellow-500 hover:shadow-card   relative'>
+                <div className=' w-[80px] lg:w-[100px]  box-content aspect-square rounded-app-curve bg-dark-on-bg p-4  text-center relati ve absolute -top-1/2 translate-y-1/2 '>
+                    <Image  src={item.img} alt={item.title}  />
                 </div>
                 <span className='text-2xl font-bold'>{item.title}</span>
                 <p className='text-center text-xl'>{item.description}</p>
