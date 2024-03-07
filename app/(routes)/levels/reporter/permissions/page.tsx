@@ -1,6 +1,6 @@
 import React from 'react'
 import { persmissionData } from './data.mock'
-import { DetailItem } from '@/app/_components'
+import { DetailItem } from '@components'
 import { TabSelector } from '../components/TabSelector'
 import { ButtonList } from '../components/ButtonList'
 import { ReporterName } from '../components/ReporterName'
