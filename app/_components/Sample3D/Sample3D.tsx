@@ -10,7 +10,6 @@ export const Sample3D = () => {
 
     const ref = useRef<any>();
 
-    // flat linear
 
     const Box = () => {
 
@@ -26,7 +25,7 @@ export const Sample3D = () => {
         return <primitive ref={ref} object={bugget} scale={2.5} />
     }
 
-    return <Canvas className="cursor-pointer border border-gray-100 h-[100px]">
+    return <Canvas className="cursor-pointer border">
         <ambientLight />
         <OrbitControls enableZoom={false} 
         maxPolarAngle={Math.PI / 2}
