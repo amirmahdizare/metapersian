@@ -19,7 +19,7 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@assets": ["./app/_assets"],
+      "@assets/*": ["./app/_assets/*"],
       "@components": ["./app/_components"],
       "@types": ["./app/_types"],
     }
