@@ -1,5 +1,5 @@
 import React from 'react'
-import { Accordion, DetailItem, Divider } from '@/app/_components'
+import { Accordion, DetailItem, Divider } from '@components'
 import { gemInfo } from './data.mock'
 import { ReporterName } from '../components/ReporterName'
 import { ButtonList } from '../components/ButtonList'

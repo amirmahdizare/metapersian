@@ -1,5 +1,5 @@
 import React from 'react'
-import { DetailItem } from '@/app/_components'
+import { DetailItem } from '@components'
 import { rewards } from './data.mock'
 import { ButtonList } from '../components/ButtonList'
 import { TabSelector } from '../components/TabSelector'

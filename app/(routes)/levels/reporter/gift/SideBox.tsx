@@ -5,7 +5,7 @@ import Image from 'next/image'
 import png from '@/app/_images/bugguet/sample.png'
 // import gifVideo from '../../../../public/sample.mp4'
 
-import { Sample3D } from '@/app/_components/Sample3D/Sample3D'
+import { Sample3D } from '@components'
 
 
 type modes = 'gif' | 'fbx' | 'png'
