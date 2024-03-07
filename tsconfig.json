@@ -17,9 +17,12 @@
         "name": "next"
       }
     ],
+    // "baseUrl": "./app",
     "paths": {
       "@/*": ["./*"],
       "@assets/*": ["./app/_assets/*"],
+      "@icons":["./app/_assets/_icons"],
+      "@images/*":["./app/_assets/_images/*"],
       "@components": ["./app/_components"],
       "@types": ["./app/_types"],
     }

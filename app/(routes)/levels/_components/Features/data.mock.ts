@@ -1,8 +1,8 @@
 import { FeatureType } from "@/app/_types";
-import coin from '@/app/_images/vectors/coin.png'
-import goal from '@/app/_images/vectors/goal.png'
-import lamp from '@/app/_images/vectors/lamp.png'
-import rocket from '@/app/_images/vectors/rocket.png'
+import coin from '@images/vectors/coin.png'
+import goal from '@images/vectors/goal.png'
+import lamp from '@images/vectors/lamp.png'
+import rocket from '@images/vectors/rocket.png'
 
 
 export const features: Array<FeatureType> = [

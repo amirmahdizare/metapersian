@@ -1,15 +1,15 @@
-import { MenuItemType } from "@/app/_types";
-import participation from '@/app/_images/menuImages/participation.png'
-import reporter from '@/app/_images/menuImages/reporter.png'
-import citizen from '@/app/_images/menuImages/citizen-baguette.png'
-import developer from '@/app/_images/menuImages/developer-baguette.png'
-import inspector from '@/app/_images/menuImages/citizen-baguette.png'
-import bussiness from '@/app/_images/menuImages/businessman-baguette.png'
-import lawyer from '@/app/_images/menuImages/lawyer-baguette.png'
-import cityCouncil from '@/app/_images/menuImages/city-council-baguette.png'
-import mayor from '@/app/_images/menuImages/the-mayor-baguette.png'
-import governer from '@/app/_images/menuImages/governor-baguette.png'
-import miniester from '@/app/_images/menuImages/minister-baguette.png'
+import { MenuItemType } from "@types";
+import participation from '@images/menuImages/participation.png'
+import reporter from '@images/menuImages/reporter.png'
+import citizen from '@images/menuImages/citizen-baguette.png'
+import developer from '@images/menuImages/developer-baguette.png'
+import inspector from '@images/menuImages/citizen-baguette.png'
+import bussiness from '@images/menuImages/businessman-baguette.png'
+import lawyer from '@images/menuImages/lawyer-baguette.png'
+import cityCouncil from '@images/menuImages/city-council-baguette.png'
+import mayor from '@images/menuImages/the-mayor-baguette.png'
+import governer from '@images/menuImages/governor-baguette.png'
+import miniester from '@images/menuImages/minister-baguette.png'
 
 export const routes: Array<MenuItemType> = [
     {

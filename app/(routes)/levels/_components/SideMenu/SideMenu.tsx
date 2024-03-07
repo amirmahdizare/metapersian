@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import logo from '@/app/_images/logo.png'
+import logo from '@assets/_images/logo.png'
 import Image from 'next/image'
 
 import { routes } from './routes'
@@ -47,7 +47,7 @@ export const SideMenu = ({ isMobile }: { isMobile?: boolean }) => {
       <div className='flex flex-col h-fit '>
 
 
-        {routes.map(route => <Link href={`/levels/${route.route}`} className={`flex flex-row gap-2.5  items-center rounded-app hover:bg-black   transition-all duration-200 cursor-pointer p-2.5 ${segment == route.route ? 'bg-black' : ''} `}>
+        {routes.map(route => <Link key={route.route} href={`/levels/${route.route}`} className={`flex flex-row gap-2.5  items-center rounded-app hover:bg-black   transition-all duration-200 cursor-pointer p-2.5 ${segment == route.route ? 'bg-black' : ''} `}>
           <Image src={route.img} height={35} width={27.5} alt={route.faTitle} />
           {expaned && <span>{route.faTitle}</span>}
 

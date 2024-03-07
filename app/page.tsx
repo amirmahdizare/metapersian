@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SideMenu } from "./_components/SideMenu/SideMenu";
+// import { SideMenu } from "./_components/";
 import Link from "next/link";
 
 export default function Home() {

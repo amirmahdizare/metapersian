@@ -2,7 +2,7 @@
 
 import React, { useCallback, useState } from 'react'
 import Image from 'next/image'
-import photo from '@/app/_images/menuImages/citizen-baguette.png'
+import photo from '@images/menuImages/citizen-baguette.png'
 
 
 type modes =  'fbx' | 'png'

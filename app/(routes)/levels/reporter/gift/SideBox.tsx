@@ -2,7 +2,7 @@
 
 import React, { useCallback, useState } from 'react'
 import Image from 'next/image'
-import png from '@/app/_images/bugguet/sample.png'
+import png from '@images/bugguet/sample.png'
 // import gifVideo from '../../../../public/sample.mp4'
 
 import { Sample3D } from '@components'
