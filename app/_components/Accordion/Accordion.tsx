@@ -16,7 +16,7 @@ export const Accordion = ({ title, description, items }: { title: string, descri
 
             <div className={` transition-all flex flex-col gap-6 duration-300 text-dark-tex-gray ${open ? 'max-h-[1000px] opacity-1' : 'max-h-0 overflow-hidden opacity-0'}`}>
                 <p className='font-light'>{description}</p>
-                {items?.map(item => <p className='inline' >
+                {items?.map(item => <p key={item.title} className='inline' >
                     <span className='font-bold text-white inline'>{item.title} : </span>
                     <p className='text-dark-tex-gray inline font-light'>{item.description}</p>
                 </p>)}

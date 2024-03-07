@@ -43,8 +43,8 @@ export default function page() {
                     <div className='grid grid-cols-2 gap-2'>
                         {Object.values(infoData.items.reduce<{ [key: string]: Array<{ title: string, value: any, col: number, span?: number }> }>((pv, cv) => {
                             return ({ ...pv, [cv.col]: [...(pv?.[cv.col] ?? []), cv] })
-                        }, {})).map(item => <div className={`flex flex-col ${item.findIndex(i => i.span == 2) != -1 ? 'col-span-2' : 'col-span-2 lg:col-span-1'}  `}>
-                            {item?.map(i => <DetailItem {...i} />)}
+                        }, {})).map((item ,index) => <div key={index} className={`flex flex-col ${item.findIndex(i => i.span == 2) != -1 ? 'col-span-2' : 'col-span-2 lg:col-span-1'}  `}>
+                            {item?.map(i => <DetailItem key={i.title} {...i} />)}
                         </div>)}
 
                     </div>

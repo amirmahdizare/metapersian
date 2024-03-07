@@ -16,7 +16,7 @@ export const SideBox = () => {
         onClick={() => setMode(fieldKey)}
     >
         {title}
-    </button>, [])
+    </button>, [mode])
 
 
     return (
