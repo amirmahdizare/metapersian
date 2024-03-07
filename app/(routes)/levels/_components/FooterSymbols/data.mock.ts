@@ -8,6 +8,8 @@ import nft  from '@images/footerSymbols/work-soon.png'
 import ad  from '@images/footerSymbols/ad.png'
 import uni  from '@images/footerSymbols/work (2).png'
 import u  from '@images/footerSymbols/waste-soon (1).png'
+import uIcon  from '@images/footerSymbols/u.png'
+import play  from '@images/footerSymbols/play.png'
 import w  from '@images/footerSymbols/waste-soon (2).png'
 import thoes  from '@images/footerSymbols/video.png'
 import vezarat  from '@images/footerSymbols/vezarat.png'
@@ -86,7 +88,14 @@ export const footerSymbols :Array<FooterSymbolType > = [
         img:toor ,
         link:''
     },
-
+    {
+        img:uIcon ,
+        link:''
+    },
+    {
+        img:play ,
+        link:''
+    },
 
     {
         img:tenders ,
