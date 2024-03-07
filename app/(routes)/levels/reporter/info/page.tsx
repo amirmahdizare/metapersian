@@ -11,7 +11,7 @@ export default function page() {
 
 
     return (
-        <div className='grid grid-cols-3 gap-4 rounded-app2 bg-dark-section-color p-4'>
+        <div className='grid grid-cols-3 gap-6 rounded-app2 bg-dark-section-color p-4'>
 
             <div className=' col-span-3 lg:hidden order-1'><TabSelector /></div>
 
