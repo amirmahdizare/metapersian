@@ -23,7 +23,7 @@ export const SideBox = () => {
 
 
     return (
-        <div className='flex flex-col gap-2 justify-between'>
+        <div className='flex flex-col gap-6 justify-between'>
 
             {mode == 'gif' && <video controls={false} loop autoPlay>
                 <source src={'../../../../sample.mp4'} type='video/mp4' />

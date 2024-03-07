@@ -5,7 +5,7 @@ import Image from 'next/image'
 import photo from '@/app/_images/menuImages/citizen-baguette.png'
 
 
-type modes = 'gif' | 'fbx' | 'png'
+type modes =  'fbx' | 'png'
 
 export const SideBox = () => {
 
@@ -22,14 +22,12 @@ export const SideBox = () => {
     return (
         <div className='flex flex-col gap-2 justify-between'>
 
-            {mode == 'gif' && <Image alt='GIf'  src={photo} />}
 
             {mode == 'png' && <Image alt='GIf'  src={photo} />}
 
             <div className='flex flex-row justify-around lg:justify-center gap-8'>
                 <CustomButton fieldKey='png' title='PNG' />
                 <CustomButton fieldKey='fbx' title='FBX' />
-                <CustomButton fieldKey='gif' title='GIF' />
             </div>
 
         </div>
