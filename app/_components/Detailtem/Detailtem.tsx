@@ -1,4 +1,4 @@
-import { Check, Close } from '@/app/_icons'
+import { Check, Close } from '@assets/_icons'
 import React from 'react'
 
 export const DetailItem = ({ title, value }: { title: string, value: any }) => {

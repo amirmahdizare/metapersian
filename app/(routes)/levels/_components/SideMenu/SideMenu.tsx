@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { routes } from './routes'
 import { SelectTheme } from './components/SelectTheme'
 import { SelectLanguage } from './components/SelectLanguage'
-import { ChevronUp, Login, Menu } from '@/app/_icons'
+import { ChevronUp, Login, Menu } from '@assets/_icons'
 import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
 

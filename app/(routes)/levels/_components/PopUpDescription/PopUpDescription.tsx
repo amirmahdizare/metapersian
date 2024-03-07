@@ -1,5 +1,5 @@
 'use client'
-import { Close } from '@/app/_icons'
+import { Close } from '@assets/_icons'
 import React, { ReactNode, useState } from 'react'
 import ClickAwayListener from 'react-click-away-listener'
 

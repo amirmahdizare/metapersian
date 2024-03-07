@@ -1,5 +1,5 @@
 'use client'
-import { Moon, Sun } from '@/app/_icons'
+import { Moon, Sun } from '@assets/_icons'
 import React, { useState } from 'react'
 
 export const SelectTheme = ({ hideTitle }: { hideTitle: boolean }) => {

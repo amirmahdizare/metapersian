@@ -1,4 +1,4 @@
-import { ChevronUp, World } from '@/app/_icons'
+import { ChevronUp, World } from '@assets/_icons'
 import React from 'react'
 
 export const SelectLanguage = ({ hideTitle }: { hideTitle: boolean }) => {

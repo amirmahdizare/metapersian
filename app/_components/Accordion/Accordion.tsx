@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { ChevronUp } from '@/app/_icons'
+import { ChevronUp } from '@assets/_icons'
 
 export const Accordion = ({ title, description, items }: { title: string, description: string, items?: Array<{ title: string, description: string }> }) => {
 

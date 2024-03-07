@@ -1,4 +1,4 @@
-import { Menu } from '@/app/_icons'
+import { Menu } from '@assets/_icons'
 import React from 'react'
 import { SideMenu } from '../SideMenu/SideMenu'
 
