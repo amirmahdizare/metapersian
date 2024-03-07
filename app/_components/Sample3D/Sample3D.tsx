@@ -22,7 +22,7 @@ export const Sample3D = () => {
             camera.lookAt(0, 1.8, 0);
         });
 
-        return <primitive ref={ref} object={bugget} scale={2.5} />
+        return <primitive ref={ref} object={bugget} scale={4.5} />
     }
 
     return <Canvas className="cursor-pointer border">
@@ -35,15 +35,13 @@ export const Sample3D = () => {
             <Box />
         </Suspense>
         <PerspectiveCamera
-        // makeDefault
+        makeDefault
         // fov={10}
-
-
         // modelViewMatrix={}
         // far={10}
         // near={1}
         // position={[200, 200, 200]}
-        position={[50, -100, 200]} 
+        position={[300, 50, 0]} 
         // position={[-200, 1500, 50]}
         // position={[100,100,100]} 
         // lookAt={() => (new Vector3(0, 0, 0))}
