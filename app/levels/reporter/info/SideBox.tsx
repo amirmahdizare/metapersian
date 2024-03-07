@@ -3,7 +3,7 @@
 import React, { useCallback, useState } from 'react'
 import Image from 'next/image'
 import png from '@/app/_images/bugguet/sample.png'
-import gif from '@/app/_images/bugguet/sample.gif'
+// import gifVideo from '../../../../public/sample.mp4'
 
 import { Sample3D } from '@/app/_components/Sample3D/Sample3D'
 
@@ -25,7 +25,9 @@ export const SideBox = () => {
     return (
         <div className='flex flex-col gap-2 justify-between'>
 
-            {/* {mode == 'gif' && <Image alt='GIf' src={gif} unoptimized={true} layout='responsive' />} */}
+            {mode == 'gif' && <video controls={false} loop autoPlay>
+                <source src={'../../../../sample.mp4'} type='video/mp4' />
+            </video>}
 
             {mode == 'png' && <Image alt='GIf' src={png} />}
 
