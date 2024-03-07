@@ -2,7 +2,8 @@
 
 import React, { useCallback, useState } from 'react'
 import Image from 'next/image'
-import photo from '@images/menuImages/citizen-baguette.png'
+import png from '@images/bugguet/sample.png'
+import { Sample3D } from '@components'
 
 
 type modes =  'fbx' | 'png'
@@ -20,10 +21,12 @@ export const SideBox = () => {
 
 
     return (
-        <div className='flex flex-col gap-2 justify-between'>
+        <div className='flex flex-col gap-6 justify-between'>
+
+            {mode == 'png' && <Image alt='GIf' src={png} />}
 
 
-            {mode == 'png' && <Image alt='GIf'  src={photo} />}
+            {mode == 'fbx' && <div className=' w-full h-[500px] flex justify-center items-center '><Sample3D /></div>}
 
             <div className='flex flex-row justify-around lg:justify-center gap-8'>
                 <CustomButton fieldKey='png' title='PNG' />

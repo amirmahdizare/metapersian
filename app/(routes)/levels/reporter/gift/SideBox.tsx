@@ -3,12 +3,10 @@
 import React, { useCallback, useState } from 'react'
 import Image from 'next/image'
 import png from '@images/bugguet/sample.png'
-// import gifVideo from '../../../../public/sample.mp4'
-
 import { Sample3D } from '@components'
 
 
-type modes = 'gif' | 'fbx' | 'png'
+type modes =  'fbx' | 'png'
 
 export const SideBox = () => {
 
@@ -25,10 +23,6 @@ export const SideBox = () => {
     return (
         <div className='flex flex-col gap-6 justify-between'>
 
-            {mode == 'gif' && <video controls={false} loop autoPlay>
-                <source src={'../../../../sample.mp4'} type='video/mp4' />
-            </video>}
-
             {mode == 'png' && <Image alt='GIf' src={png} />}
 
 
@@ -37,7 +31,6 @@ export const SideBox = () => {
             <div className='flex flex-row justify-around lg:justify-center gap-8'>
                 <CustomButton fieldKey='png' title='PNG' />
                 <CustomButton fieldKey='fbx' title='FBX' />
-                <CustomButton fieldKey='gif' title='GIF' />
             </div>
 
         </div>
