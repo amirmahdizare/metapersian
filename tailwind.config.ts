@@ -37,7 +37,9 @@ const config: Config = {
         'app-curve': '100px'
       },
       boxShadow: {
-        'card': '2px 2px 20.700000762939453px 0px rgba(245, 245, 245, 0.3) '
+        'card': '2px 2px 20.700000762939453px 0px rgba(245, 245, 245, 0.3) ',
+        'bottom':'1px 3px 10px 0px rgba(255, 199, 0, 0.25)'
+        
       }
 
     },

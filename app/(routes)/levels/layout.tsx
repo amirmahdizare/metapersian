@@ -14,7 +14,7 @@ export default function RootLayout({
 
 
     return (
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 xl:gap-16 bg-black  p-6 justify-center ">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-14 xl:gap-16 bg-black pt-32 lg:pt-6  p-6 justify-center ">
 
             <ResponsiveHeader title="سطح خبرنگار یک" />
 

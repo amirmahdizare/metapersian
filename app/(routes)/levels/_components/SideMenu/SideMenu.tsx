@@ -17,57 +17,62 @@ export const SideMenu = ({ isMobile }: { isMobile?: boolean }) => {
 
   const segment = useSelectedLayoutSegment()
 
-  if (isMobile && !expaned)
-    return <Menu className='cursor-pointer text-white' width={20} height={20} onClick={() => setExpanded(true)} />
+  // if (isMobile && !expaned)
+  //   return <Menu className='cursor-pointer text-white' width={25} height={25} onClick={() => setExpanded(true)} />
 
   return (
-    <div className={`bg-dark-on-bg z-10 ${isMobile ? 'lg:hidden' : ''} backdrop-brightness-50 text-dark-tooltip text-[16px] absolute right-4 lg:right-0  h-fit rounded-app lg:relative gap-4 flex transition-all duration-400 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 ' : 'max-w-[60px] lg:max-w-[100px] overflow -hidden p-5  justify-center items-center'}`}>
+    <>
 
-      {!expaned && <Menu width={20} height={20} className='cursor-pointer' onClick={() => setExpanded(!expaned)} />}
+      {isMobile  && <Menu className='cursor-pointer text-white' width={22.5} height={22.5} onClick={() => setExpanded(true)} />}
+      
+      {(!isMobile  || expaned) && <div className={`bg-dark-on-bg z-10 ${isMobile ? 'lg:hidden' : ''} backdrop-brightness-50 text-dark-tooltip text-[16px] absolute right-4 lg:right-0   h-fit rounded-app lg:relative gap-4 flex transition-all duration-400 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 items-stretch top-6 lg:top-0' : 'max-w-[60px] lg:max-w-[100px] overflow -hidden p-5   justify-start items-center'}`}>
 
-      <div className='flex flex-row justify-between items-center gap-8'>
+        {!expaned && <Menu width={20} height={20} className='cursor-pointer' onClick={() => setExpanded(!expaned)} />}
 
-        <div className='flex flex-row gap-4 items-center justify-center'>
+        <div className='flex flex-row justify-between items-center gap-8'>
 
-          <Image alt='logo' src={logo} width={40} height={40} />
+          <div className='flex flex-row gap-4 items-center justify-center'>
 
-          {expaned && <div className='flex flex-col gap-1'>
-            <span className='font-bold text-white'>متارنگ</span>
-            <span>متاورس رنگ</span>
+            <Image alt='logo' src={logo} width={40} height={40} />
 
-          </div>}
+            {expaned && <div className='flex flex-col gap-1'>
+              <span className='font-bold text-white'>متارنگ</span>
+              <span>متاورس رنگ</span>
+
+            </div>}
+          </div>
+
+          <div className={`rounded-[50%]  w-8 h-8 shrink-0 flex flex-row justify-center items-center cursor-pointer text-dark-Font ${expaned ? 'bg-black' : 'absolute right-[100px] top-8 z-40 bg-dark-on-bg'}`} onClick={() => setExpanded(!expaned)}>
+            <ChevronUp className={`rotate-90 `} width={12} height={12} />
+          </div>
+
         </div>
 
-        <div className={`rounded-[50%]  w-8 h-8 shrink-0 flex flex-row justify-center items-center cursor-pointer text-dark-Font ${expaned ? 'bg-black' : 'absolute right-[100px] top-8 z-40 bg-dark-on-bg'}`} onClick={() => setExpanded(!expaned)}>
-          <ChevronUp className={`rotate-90 `} width={12} height={12} />
+        <div className='flex flex-col h-fit '>
+
+
+          {routes.map(route => <Link key={route.route} href={`/levels/${route.route}`} className={`flex flex-row gap-2.5  items-center rounded-app hover:bg-black   transition-all duration-200 cursor-pointer p-2.5 ${segment == route.route ? 'bg-black' : ''} `}>
+            <Image src={route.img} height={35} width={27.5} alt={route.faTitle} />
+            {expaned && <span>{route.faTitle}</span>}
+
+          </Link>)}
+
         </div>
 
-      </div>
+        <SelectLanguage hideTitle={expaned} />
 
-      <div className='flex flex-col h-fit '>
+        <div className={`bg-yellow-400 flex justify-between shrink-0 flex-row rounded-app  items-center text-black ${!expaned ? 'aspect-square p-2' : ' p-2 px-4'} `}>
+          <Login width={20} height={20} />
 
+          {expaned && <span>ورود</span>}
 
-        {routes.map(route => <Link key={route.route} href={`/levels/${route.route}`} className={`flex flex-row gap-2.5  items-center rounded-app hover:bg-black   transition-all duration-200 cursor-pointer p-2.5 ${segment == route.route ? 'bg-black' : ''} `}>
-          <Image src={route.img} height={35} width={27.5} alt={route.faTitle} />
-          {expaned && <span>{route.faTitle}</span>}
+        </div>
 
-        </Link>)}
+        <div className='bg-gray-600 w-full h-[1px]'></div>
 
-      </div>
+        <SelectTheme hideTitle={expaned} />
 
-      <SelectLanguage hideTitle={expaned} />
-
-      <div className={`bg-yellow-400 flex justify-between shrink-0 flex-row rounded-app  items-center text-black ${!expaned ? 'aspect-square p-2' : ' p-2 px-4'} `}>
-        <Login width={20} height={20} />
-
-        {expaned && <span>ورود</span>}
-
-      </div>
-
-      <div className='bg-gray-600 w-full h-[1px]'></div>
-
-      <SelectTheme hideTitle={expaned} />
-
-    </div>
+      </div>}
+    </>
   )
 }
