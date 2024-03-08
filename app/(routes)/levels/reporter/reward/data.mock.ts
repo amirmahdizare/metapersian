@@ -2,8 +2,8 @@
 export const rewards = {
     items: [
         {
-            title: 'دریافت 0',
-            value: 'PSC',
+            title: 'دریافت PSC',
+            value: '0',
             colNumber: 1
         },
         {
