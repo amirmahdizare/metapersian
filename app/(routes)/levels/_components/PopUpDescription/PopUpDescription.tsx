@@ -13,7 +13,7 @@ export const PopUpDescription = ({ description, children }: { description: strin
             <p className='line-clamp-6 text-ellipsis overflow-hidden text-white'>{description}</p>
 
             <div className='flex flex-row items-center w-full gap-2  justify-between'>
-                <a className='text-blue-600' onClick={() => setOpen(true)}>مشاهده بیشتر</a>
+                <a className='text-dark-active-btn cursor-pointer' onClick={() => setOpen(true)}>مشاهده بیشتر</a>
                 {children}
             </div>
 
