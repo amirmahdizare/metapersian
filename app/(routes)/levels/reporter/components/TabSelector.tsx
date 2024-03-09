@@ -10,7 +10,7 @@ export const TabSelector = () => {
 
 
     const ButtonLink = ({ title, link }: { title: string, link: string }) => {
-        return <Link href={`/levels/reporter${link}`} className={pathname.includes(link) ? 'text-dark-active-btn border-b-2 border-dark-active-btn p-3 pb-2.5' : ' border-b-2 border-transparent p-3 pb-2.5'}>
+        return <Link href={`/levels/reporter${link}`} className={pathname.includes(link) ? 'text-dark-active-btn border-b-2 border-dark-active-btn p-3 pb-2.5 font-bold' : ' border-b-2 border-transparent p-3 pb-2.5'}>
             {title}
         </Link>
     }
