@@ -1,3 +1,4 @@
+'use client'
 import { Menu } from '@assets/_icons'
 import React from 'react'
 import { SideMenu } from '../SideMenu/SideMenu'
@@ -8,7 +9,7 @@ import underLine from '@assets/_images/titlePng.png'
 export const ResponsiveHeader = ({ title }: { title: string }) => {
     return (
         <>
-            <div className='flex flex-row gap-2 shadow-bottom justify-between lg:hidden items-center fixed left-0 w-full p-5 top-0 bg-dark-bg z-[50]'>
+            <div className='flex flex-row gap-2 shadow-bottom justify-between lg:hidden items-center fixed top-0 right-0 w-full p-5  bg-dark-bg z-[50]'>
                 <SideMenu isMobile />
                 <div className='flex flex-row gap-4 items-center justify-center '>
 

@@ -25,7 +25,7 @@ export const SideMenu = ({ isMobile }: { isMobile?: boolean }) => {
 
       {isMobile  && <Menu className='cursor-pointer text-white' width={22.5} height={22.5} onClick={() => setExpanded(true)} />}
       
-      {(!isMobile  || expaned) && <div className={`bg-dark-on-bg z-10 ${isMobile ? 'lg:hidden' : ''} backdrop-brightness-50 text-dark-tooltip text-[16px] absolute right-4 lg:right-0   h-fit rounded-app lg:relative gap-4 flex transition-all duration-400 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 items-stretch top-6 lg:top-0' : 'max-w-[60px] lg:max-w-[100px] overflow -hidden p-5   justify-start items-center'}`}>
+      {(!isMobile  || expaned) && <div className={`bg-dark-on-bg z-20 ${isMobile ? 'lg:hidden' : ''} fixed right-0 top-0 backdrop-brightness-50 text-dark-tooltip text-[16px] h-screen  rounded-app  gap-4 flex transition-all duration-300 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 items-stretch  top-0' : 'max-w-[60px] lg:max-w-[100px] overflow -hidden p-5   justify-start items-center'}`}>
 
         {!expaned && <Menu width={20} height={20} className='cursor-pointer' onClick={() => setExpanded(!expaned)} />}
 
@@ -48,7 +48,7 @@ export const SideMenu = ({ isMobile }: { isMobile?: boolean }) => {
 
         </div>
 
-        <div className='flex flex-col h-fit '>
+        <div className='flex flex-col flex-1 overflow-auto'>
 
 
           {routes.map(route => <Link key={route.route} href={`/levels/${route.route}`} className={`flex flex-row gap-2.5  items-center rounded-app hover:bg-black   transition-all duration-200 cursor-pointer p-2.5 ${segment == route.route ? 'bg-black' : ''} `}>
