@@ -51,7 +51,8 @@ export const SideMenu = ({ isMobile }: { isMobile?: boolean }) => {
         <div className='flex flex-col flex-1 overflow-auto'>
 
 
-          {routes.map(route => <Link key={route.route} href={`/levels/${route.route}`} className={`flex flex-row gap-2.5  items-center rounded-app hover:bg-black   transition-all duration-200 cursor-pointer p-2.5 ${segment == route.route ? 'bg-black' : ''} `}>
+          {routes.map(route => <Link key={route.route} href={`/levels/${route.route}`} className={`flex flex-row gap-2.5  items-center rounded-app relative hover:bg-black   transition-all duration-200 cursor-pointer p-2.5 hover:text-dark-active-btn ${segment == route.route ? 'text-dark-active-btn bg-black rounded-r-app' : ''} `}>
+            {segment == route.route && <div className='absolute h-[calc(100%-6px)] top-1/2 -translate-y-1/2 rounded-l-app bg-dark-active-btn w-1 right-0 '></div>}
             <Image src={route.img} height={35} width={27.5} alt={route.faTitle} />
             {expaned && <span>{route.faTitle}</span>}
 
