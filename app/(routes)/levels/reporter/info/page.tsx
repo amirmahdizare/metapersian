@@ -29,7 +29,7 @@ export default function page() {
                     <div className='lg:flex flex-col gap-2 hidden'>
                         <span className='text-white'>توضیحات:</span>
 
-                        <p className='text-gray-300 leading-8'>
+                        <p className='text-gray-300 leading-9'>
                             {infoData.desc}
                         </p>
                     </div>

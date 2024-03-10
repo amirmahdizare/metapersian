@@ -18,7 +18,7 @@ export const Accordion = ({ title, description, items }: { title: string, descri
                 <p className='font-light'>{description}</p>
                 {items?.map(item => <p key={item.title} className='inline' >
                     <span className='font-bold text-white inline'>{item.title} : </span>
-                    <p className='text-dark-tex-gray inline font-light'>{item.description}</p>
+                    <p className='text-dark-tex-gray inline font-light leading-10'>{item.description}</p>
                 </p>)}
             </div>
 
