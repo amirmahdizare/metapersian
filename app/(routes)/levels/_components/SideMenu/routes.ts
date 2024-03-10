@@ -1,4 +1,5 @@
 import { MenuItemType } from "@types";
+import home from '@images/menuImages/home.png'
 import participation from '@images/menuImages/participation.png'
 import reporter from '@images/menuImages/reporter.png'
 import citizen from '@images/menuImages/citizen-baguette.png'
@@ -12,6 +13,11 @@ import governer from '@images/menuImages/governor-baguette.png'
 import miniester from '@images/menuImages/minister-baguette.png'
 
 export const routes: Array<MenuItemType> = [
+    {
+        faTitle: 'صفحه نخست',
+        route:'home',
+        img: home
+    },
     {
         faTitle: 'شهروند',
         route:'citizen',
