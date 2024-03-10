@@ -42,7 +42,7 @@ export const SideMenu = ({ isMobile }: { isMobile?: boolean }) => {
             </div>}
           </div>
 
-          <div className={`rounded-[50%]  w-8 h-8 shrink-0 flex flex-row justify-center items-center cursor-pointer text-dark-Font ${expaned ? 'bg-black' : 'absolute right-[100px] top-8 z-40 bg-dark-on-bg'}`} onClick={() => setExpanded(!expaned)}>
+          <div className={`rounded-[50%]  w-8 h-8 shrink-0 flex flex-row justify-center items-center cursor-pointer text-dark-Font ${expaned ? 'bg-black' : 'hidden'}`} onClick={() => setExpanded(!expaned)}>
             <ChevronUp className={`rotate-90 `} width={12} height={12} />
           </div>
 
