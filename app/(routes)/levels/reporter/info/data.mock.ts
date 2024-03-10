@@ -31,7 +31,7 @@ export const infoData = {
         },
 
         {
-            title: 'فونت مورد اسفتاده انگلیسی',
+            title: 'فونت مورد استفاده انگلیسی',
             value: 'Bell MT Italic.010',
             col:1
         },
@@ -55,7 +55,7 @@ export const infoData = {
         },
 
         {
-            title: 'تعداد خطوط مدل سطح:',
+            title: 'تعداد خطوط مدل سطح',
             value: '107770',
             col:2
         },
