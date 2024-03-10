@@ -23,16 +23,16 @@ export const SideBox = () => {
 
 
     return (
-        <div className='flex flex-col gap-6 justify-between'>
+        <div className='flex flex-col gap-6 justify-between '>
 
-            {mode == 'gif' && <video controls={false} loop autoPlay>
+            {mode == 'gif' && <video controls={false} loop autoPlay className='bg-black rounded-app'>
                 <source src={'../../../../sample.mp4'} type='video/mp4' />
             </video>}
 
-            {mode == 'png' && <Image alt='GIf' src={png} />}
+            {mode == 'png' && <Image alt='PNG' src={png}  className='bg-black rounded-app'/>}
 
 
-            {mode == 'fbx' && <div className=' w-full h-[500px] flex justify-center items-center '><Sample3D /></div>}
+            {mode == 'fbx' && <div className=' w-full h-[500px] flex justify-center items-center  rounded-app'><Sample3D /></div>}
 
             <div className='flex flex-row justify-around lg:justify-center gap-8'>
                 <CustomButton fieldKey='png' title='PNG' />
