@@ -23,7 +23,7 @@ export const SideBox = () => {
     return (
         <div className='flex flex-col gap-6 justify-between'>
 
-            {mode == 'png' && <Image alt='GIf' src={png} />}
+            {mode == 'png' && <Image   alt='PNG' src={png} className='' />}
 
 
             {mode == 'fbx' && <div className=' w-full h-[500px] flex justify-center items-center '><Sample3D /></div>}
