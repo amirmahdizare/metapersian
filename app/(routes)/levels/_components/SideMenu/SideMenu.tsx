@@ -23,11 +23,11 @@ export const SideMenu = ({ isMobile }: { isMobile?: boolean }) => {
   return (
     <>
 
-      {isMobile  && <Menu className='cursor-pointer text-white' width={22.5} height={22.5} onClick={() => setExpanded(true)} />}
+      {isMobile  && <Menu className='cursor-pointer text-gray-300' width={22.5} height={22.5} onClick={() => setExpanded(true)} />}
       
       {(!isMobile  || expaned) && <div className={`bg-dark-on-bg z-20 ${isMobile ? 'lg:hidden' : ''} fixed right-0 top-0 backdrop-brightness-50 text-dark-tooltip text-[16px] h-screen  rounded-app  gap-4 flex transition-all duration-300 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 items-stretch  top-0' : 'max-w-[60px] lg:max-w-[100px] overflow -hidden p-5   justify-start items-center'}`}>
 
-        {!expaned && <Menu width={20} height={20} className='cursor-pointer' onClick={() => setExpanded(!expaned)} />}
+        {!expaned && <Menu width={20} height={20} className='cursor-pointer text-gray-300' onClick={() => setExpanded(!expaned)} />}
 
         <div className='flex flex-row justify-between items-center gap-8'>
 

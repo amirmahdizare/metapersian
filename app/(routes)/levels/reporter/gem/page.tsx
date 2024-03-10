@@ -33,7 +33,7 @@ export default function page() {
                     <div className='grid grid-cols-2 gap-4 lg:gap-12'>
                         {Object.values(gemInfo.items.reduce<{ [key: string]: Array<{ title: string, value: any, col: number, span?: number }> }>((pv, cv) => {
                             return ({ ...pv, [cv.colNumber]: [...(pv?.[cv.colNumber] ?? []), cv] })
-                        }, {})).map((item ,index) => <div key={index} className={`flex flex-col gap-4 ${item.findIndex(i => i.span == 2) != -1 ? 'col-span-2' : 'col-span-2 lg:col-span-1'}  `}>
+                        }, {})).map((item ,index) => <div key={index} className={`flex flex-col gap-4 ${item.findIndex(i => i.span == 2) != -1 ? 'col-span-2' : 'col-span-2 xl:col-span-1'}  `}>
                             {item?.map(i => <DetailItem key={i.title} {...i} />)}
                         </div>)}
 
