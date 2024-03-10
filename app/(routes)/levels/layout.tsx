@@ -20,7 +20,7 @@ export default function RootLayout({
 
             <div className="hidden lg:flex  h- screen z-10"><SideMenu /></div>
 
-            <div className="flex flex-col gap-8 flex-1 items-start w-full max-w-[1400px] font-normal">
+            <div className="flex flex-col gap-8 flex-1 items-start w-full max-w-[1650px] font-normal">
                 {children}
                 <Features />
                 <FooterSymbols />
