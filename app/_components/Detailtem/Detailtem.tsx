@@ -15,7 +15,7 @@ export const DetailItem = ({ title, value }: { title: string, value: any }) => {
     }
     return (
         <div className='flex flex-row gap-2 justify-between p-3  border-b-4 border-[#1a1a18] items-center font-bold '>
-            <span className='text-white'>{title} :</span>
+            <span className='text-white line-clamp-1 text-ellipsis' title={title}>{title} :</span>
             {generateValue()}
         </div>
     )
