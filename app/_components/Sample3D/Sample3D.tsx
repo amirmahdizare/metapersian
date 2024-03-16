@@ -4,9 +4,9 @@ import React, { Suspense, useRef } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera, useFBX, OrthographicCamera } from '@react-three/drei';
 
-export const Sample3D = () => {
+export const Sample3D = ({url}:{url:string}) => {
 
-    const bugget = useFBX('../../../level1-citizen.fbx');
+    const bugget = useFBX(url);
 
     const ref = useRef<any>();
 
@@ -24,13 +24,13 @@ export const Sample3D = () => {
             // camera.lookAt(0, -200, 0)
         });
 
-        return <primitive ref={ref} object={bugget} scale={4.5} />
+        return <primitive ref={ref} object={bugget} scale={4.1} />
     }
 
     return <Canvas className="cursor-pointer" >
         <Suspense fallback={<span className='text-white '>Loading...</span>}>
             <ambientLight />
-            <OrbitControls enableZoom={false}
+            <OrbitControls enableZoom={true}
                 // maxPolarAngle={Math.PI / 2} //To Curve
                 // minPolarAngle={Math.PI / 2} //To Curve
                 target={[-100, 180, 0]} //Key To Solve

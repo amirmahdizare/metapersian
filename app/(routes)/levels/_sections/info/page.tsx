@@ -4,7 +4,7 @@ import { infoData } from './data.mock'
 import { DetailItem } from '@components'
 import { TabSelector } from '../components/TabSelector'
 import { ButtonList } from '../components/ButtonList'
-import { SideBox } from './SideBox'
+import { SideBox } from '../../_components/SideBox/SideBox'
 import { SectionName } from '../components/SectionName'
 import { PopUpDescription } from '../../_components/PopUpDescription/PopUpDescription'
 import Head from 'next/head'
@@ -57,9 +57,9 @@ export default function page() {
                         <div className='w-full bg-dark-on-bg h-1'></div>
                         <div className='grid grid-cols-1 xl:grid-cols-2 gap-4 lg:gap-4'>
                             <div className={`flex flex-col gap-4 col-span-2 xl:col-span-1  `}>
-                                <DetailItem title='امتیاز مورد نیاز' value={score} />
-                                <DetailItem title='رتبه سطح' value={rank} />
-                                <DetailItem title='تعداد زیر شاخه' value={subcategories} />
+                                <DetailItem title='امتیاز مورد نیاز' value={score.toLocaleString()} />
+                                <DetailItem title='رتبه سطح' value={rank.toLocaleString()} />
+                                <DetailItem title='تعداد زیر شاخه' value={subcategories.toLocaleString()} />
                                 <DetailItem title='تاریخ ایجاد سطخ' value={creation_date} />
                                 <DetailItem title='فونت مورد استفاده فارسی' value={persian_font} />
                                 <DetailItem title='فونت مورد استفاده انگلیسی' value={english_font} />
@@ -67,9 +67,9 @@ export default function page() {
 
 
                             <div className={`flex flex-col gap-4 col-span-2 xl:col-span-1  `}>
-                                <DetailItem title='حجم فایل مدل سطح' value={file_volume} />
-                                <DetailItem title='تعداد پوینت استفاده شده در مدل سطح' value={points} />
-                                <DetailItem title='تعداد خطوط مدل سطح' value={lines} />
+                                <DetailItem title='حجم فایل مدل سطح' value={file_volume.toLocaleString()} />
+                                <DetailItem title='تعداد پوینت استفاده شده در مدل سطح' value={points.toLocaleString()} />
+                                <DetailItem title='تعداد خطوط مدل سطح' value={lines.toLocaleString()} />
                                 <DetailItem title='انیمیشن' value={!!has_animation} />
                                 <DetailItem title='طراح سطح' value={designer} />
                                 <DetailItem title='طراح مدل سه بعدی' value={model_designer} />
