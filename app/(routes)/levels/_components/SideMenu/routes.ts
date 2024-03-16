@@ -17,7 +17,7 @@ import legister from '@images/menuImages/legislator-baguette.png'
 export const routes: Array<MenuItemType> = [
     {
         faTitle: 'صفحه نخست',
-        route:'home',
+        route:'/',
         img: home,
         id:0
     },
