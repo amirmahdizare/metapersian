@@ -97,3 +97,20 @@ export interface LevelPricesType {
     effect: number
     satisfaction: number
 }
+
+export interface LevelGemType {
+    id: number
+    level_id: number
+    name: string
+    description: string
+    thread: string
+    points: number
+    volume: string
+    color: string
+    has_animation: number
+    lines: number
+    png_file: string
+    fbx_file: string
+    encryption: number
+    designer: string
+}
