@@ -1,10 +1,11 @@
 import React from 'react'
 import { LevelPageProps, pageProps } from '@/app/_types'
-import InfoPage from '../reporter/info/page'
-import GemPage from '../reporter/gem/page'
-import GiftPage from '../reporter/gift/page'
-import PermissionPage from '../reporter/permissions/page'
-import RewardPage from '../reporter/reward/page'
+import InfoPage from '../_sections/info/page'
+import GemPage from '../_sections/gem/page'
+import GiftPage from '../_sections/gift/page'
+import PermissionPage from '../_sections/permissions/page'
+import RewardPage from '../_sections/reward/page'
+import { redirect } from 'next/navigation'
 
 export default function page({ params: { params } }: LevelPageProps) {
 
@@ -24,6 +25,6 @@ export default function page({ params: { params } }: LevelPageProps) {
         return <RewardPage />
 
     return (
-        <div className='text-white text-center'>صفحه یافت نشد!!</div>
+        redirect(`${params}/info`)
     )
 }
