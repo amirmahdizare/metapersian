@@ -10,7 +10,7 @@ export const PopUpDescription = ({ description, children }: { description: strin
     return (
         <div className='flex flex-col gap-6 items-start lg:hidden'>
             <span className='text-white'>توضیحات:</span>
-            <p className='line-clamp-6 text-ellipsis overflow-hidden text-white'>{description}</p>
+            <p className='line-clamp-6 text-ellipsis overflow-hidden text-white' dangerouslySetInnerHTML={{__html:description}}/>
 
             <div className='flex flex-row items-center w-full gap-2  justify-between'>
                 <a className='text-dark-active-btn cursor-pointer' onClick={() => setOpen(true)}>مشاهده بیشتر</a>
