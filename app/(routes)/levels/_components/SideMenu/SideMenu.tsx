@@ -89,7 +89,7 @@ export const SideMenu = ({ isMobile }: { isMobile?: boolean }) => {
       </>
     )
   else if (isError)
-    return <span>خطا در دریافت اطلاعات</span>
+    return <span className='text-red-500'>خطا در دریافت اطلاعات</span>
 
   else
     return <>

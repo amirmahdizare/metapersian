@@ -73,7 +73,7 @@ export default function page() {
     }
 
     else if (isError)
-        return <div className='h-28 w-full flex justify-center items-center'>خطا در دریافت اطلاعات</div>
+        return <div className='h-28 w-full flex justify-center items-center text-red-500'>خطا در دریافت اطلاعات</div>
 
     return <div className='h-28 w-full flex justify-center items-center'><Spinner width={30} height={30} /></div>
 }
