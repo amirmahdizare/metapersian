@@ -63,4 +63,26 @@ export interface LeveLInfoType {
     designer: string
     model_designer: string
     creation_date: string
-  }
+}
+
+export interface LevelLicenceType {
+    id: number
+    level_id: number
+    create_union: number
+    add_memeber_to_union: number
+    observation_license: number
+    gate_license: number
+    lawyer_license: number
+    city_counsile_entry: number
+    establish_special_residential_property: number
+    establish_property_on_surface: number
+    judge_entry: number
+    upload_image: number
+    delete_image: number
+    inter_level_general_points: number
+    inter_level_special_points: number
+    rent_out_satisfaction: number
+    access_to_answer_questions_unit: number
+    create_challenge_questions: number
+    upload_music: number
+}
