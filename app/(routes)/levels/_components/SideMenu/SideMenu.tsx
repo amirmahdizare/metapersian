@@ -94,6 +94,6 @@ export const SideMenu = ({ isMobile }: { isMobile?: boolean }) => {
   else
     return <>
       {isMobile ? <Spinner width={22.50} height={22.5} />
-        : <div className={`bg-dark-on-bg z-20 ${isMobile ? 'lg:hidden' : ''} fixed right-0 top-0 backdrop-brightness-50 text-dark-tooltip text-[16px] h-screen h-dvh lg:h-screen  rounded-app  gap-4 flex transition-all duration-300 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 items-stretch  top-0' : 'max-w-[60px] lg:max-w-[100px] overflow -hidden p-5   justify-start items-center'}`}><Spinner width={25} height={25} /></div>}
+        : <div className={`bg-dark-on-bg z-20 ${isMobile ? 'lg:hidden' : ''} fixed right-0 top-0 backdrop-brightness-50 text-dark-tooltip text-[16px] h-screen  lg:h-screen  rounded-app  gap-4 flex transition-all duration-300 flex-col ease-linear  ${expaned ? ' max-w-[10000px] p-5 items-stretch  top-0' : 'max-w-[60px] lg:max-w-[100px] overflow -hidden p-5   justify-start items-center'}`}><Spinner width={25} height={25} /></div>}
     </>
 }
