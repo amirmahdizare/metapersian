@@ -47,7 +47,7 @@ export default function page() {
 
                         <Divider />
 
-                        <Accordion description={features} title={'قابلیت های هدیه همراه'} />
+                        <Accordion description={features} title={'قابلیت ها'} />
 
                         <Divider />
 
