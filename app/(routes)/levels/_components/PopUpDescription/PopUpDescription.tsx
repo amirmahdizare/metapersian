@@ -24,7 +24,7 @@ export const PopUpDescription = ({ description, children }: { description: strin
                             <span className='text-2xl'>توضیحات :</span>
                             <Close className='text-gray-400 cursor-pointer' width={17} height={17} onClick={() => setOpen(false)} />
                         </div>
-                        <p className='leading-9'>{description}</p>
+                        <p className='leading-9' dangerouslySetInnerHTML={{ __html: description }}/>
                     </div>
                 </ClickAwayListener>
             </div>}
