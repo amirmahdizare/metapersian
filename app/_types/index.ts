@@ -44,3 +44,23 @@ export interface LevelItemType {
     gif_file: string,
     description: string
 }
+
+export type LevelSectionKey = 'general-info' | 'gem' | 'gift' | 'licenses' | 'prize'
+
+export interface LeveLInfoType {
+    id: number
+    score: number
+    description: string
+    rank: number
+    subcategories: number
+    persian_font: string
+    english_font: string
+    file_volume: number
+    used_colors: string
+    points: number
+    lines: number
+    has_animation: number
+    designer: string
+    model_designer: string
+    creation_date: string
+  }
