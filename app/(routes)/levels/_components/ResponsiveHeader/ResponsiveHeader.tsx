@@ -5,8 +5,17 @@ import { SideMenu } from '../SideMenu/SideMenu'
 import Image from 'next/image'
 import logo from '@assets/_images/logo.png'
 import underLine from '@assets/_images/titlePng.png'
+import { useParams } from 'next/navigation'
+import { UseLevelsData } from '@/app/_hooks'
 
-export const ResponsiveHeader = ({ title }: { title: string }) => {
+export const ResponsiveHeader = () => {
+
+    const { data, isLoading, isError } = UseLevelsData()
+
+    const { params } = useParams()
+  
+    const levelTitle = data?.data.data.find(d => d.id == params?.[0])?.name
+
     return (
         <>
             <div className='flex flex-row gap-2 shadow-bottom justify-between lg:hidden items-center fixed top-0 right-0 w-full p-5  bg-dark-bg z-[50]'>
@@ -23,7 +32,7 @@ export const ResponsiveHeader = ({ title }: { title: string }) => {
                 </div>
             </div>
             <div className='flex flex-col gap-3 text-dark-active-btn lg:hidden'>
-                <span className='text-2xl  text-right flex-1 mr-2'>{title}</span>
+                <span className='text-2xl  text-right flex-1 mr-2'>سطح {levelTitle}</span>
                 <Image src={underLine} alt='underline' width={145} height={6} />
             </div>
         </>

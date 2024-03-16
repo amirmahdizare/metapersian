@@ -28,7 +28,7 @@ export default function RootLayout({
 
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-14 xl:gap-16 bg-black pt-32 lg:pt-6  p-6 justify-center ">
 
-                <ResponsiveHeader title="سطح خبرنگار یک" />
+                <ResponsiveHeader  />
 
                 <div className="hidden lg:flex  h- screen z-10"><SideMenu /></div>
 
