@@ -1,7 +1,7 @@
 import React from 'react'
 import { Accordion, DetailItem, Divider } from '@components'
 import { giftInfo } from './data.mock'
-import { ReporterName } from '../components/ReporterName'
+import { SectionName } from '../components/SectionName'
 import { ButtonList } from '../components/ButtonList'
 import { TabSelector } from '../components/TabSelector'
 import { SideBox } from './SideBox'
@@ -17,7 +17,7 @@ export default function page() {
             <div className='col-span-3 lg:col-span-2 flex flex-col gap-4 order-2'>
 
                 <div className='lg:flex flex-row gap-2 justify-between items-center hidden'>
-                    <ReporterName />
+                    <SectionName />
                     <ButtonList />
                 </div>
 

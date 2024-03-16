@@ -3,7 +3,7 @@ import { persmissionData } from './data.mock'
 import { DetailItem } from '@components'
 import { TabSelector } from '../components/TabSelector'
 import { ButtonList } from '../components/ButtonList'
-import { ReporterName } from '../components/ReporterName'
+import { SectionName } from '../components/SectionName'
 
 export default function page() {
     return (
@@ -14,7 +14,7 @@ export default function page() {
             <div className='col-span-3 lg:col-span-2 flex flex-col gap-4 order-2'>
 
                 <div className='lg:flex flex-row gap-2 justify-between items-center hidden'>
-                    <ReporterName />
+                    <SectionName />
                     <ButtonList />
                 </div>
 

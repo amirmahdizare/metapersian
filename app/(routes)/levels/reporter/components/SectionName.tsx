@@ -4,7 +4,7 @@ import { Spinner } from '@/app/_assets/_icons'
 import { UseLevelsData } from '@/app/_hooks'
 import { useParams } from 'next/navigation'
 
-export const ReporterName = () => {
+export const SectionName = () => {
 
   const { data, isLoading, isError } = UseLevelsData()
 
