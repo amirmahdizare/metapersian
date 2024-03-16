@@ -8,7 +8,7 @@ import { SelectTheme } from './components/SelectTheme'
 import { SelectLanguage } from './components/SelectLanguage'
 import { ChevronUp, Login, Menu, Spinner } from '@assets/_icons'
 import Link from 'next/link'
-import { useSelectedLayoutSegment } from 'next/navigation'
+import { useSelectedLayoutSegment, useSelectedLayoutSegments } from 'next/navigation'
 import { UseLevelsData } from '@/app/_hooks'
 
 export const SideMenu = ({ isMobile }: { isMobile?: boolean }) => {
@@ -16,7 +16,7 @@ export const SideMenu = ({ isMobile }: { isMobile?: boolean }) => {
   const [expaned, setExpanded] = useState<boolean>(false)
 
 
-  const segment = useSelectedLayoutSegment()
+  const segment = useSelectedLayoutSegment()?.split('/')[0]
 
   const { data, isLoading, isError } = UseLevelsData()
 
