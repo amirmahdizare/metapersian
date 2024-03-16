@@ -10,7 +10,7 @@ import { UseLevelSectionData } from '@/app/_hooks'
 import {  LevelPricesType } from '@/app/_types'
 import { Spinner } from '@/app/_assets/_icons'
 
-export default function page() {
+export default function Page() {
 
     const { params } = useParams()
 

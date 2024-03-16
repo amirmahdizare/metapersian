@@ -39,7 +39,7 @@ export const SideBox = () => {
 
             return
         }
-    }, [data?.data?.data])
+    }, [data?.data?.data, slug])
 
     const CustomButton = useCallback(({ title, fieldKey }: { title: string, fieldKey: modes }) => <button
         className={`px-8 p-2 flex items-center justify-center flex-1 lg:flex-none rounded-app ${mode == fieldKey ? 'bg-dark-active-btn text-black' : 'bg-dark-on-bg text-gray-400'}`}

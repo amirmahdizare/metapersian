@@ -15,7 +15,7 @@ import { Spinner } from '@/app/_assets/_icons'
 
 
 
-export default function page() {
+export default function Page() {
 
     const { params } = useParams()
 

@@ -12,7 +12,7 @@ import { PopUpDescription } from '../../_components/PopUpDescription/PopUpDescri
 import { SideBox } from '../../_components/SideBox/SideBox'
 
 
-export default function page() {
+export default function Page() {
 
     const { params } = useParams()
 

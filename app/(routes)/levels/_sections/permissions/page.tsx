@@ -10,7 +10,7 @@ import { useParams } from 'next/navigation'
 import { LevelLicenceType } from '@/app/_types'
 import { Spinner } from '@/app/_assets/_icons'
 
-export default function page() {
+export default function Page() {
 
     const { params } = useParams()
 

@@ -11,7 +11,7 @@ import { Spinner } from '@/app/_assets/_icons'
 import { SideBox } from '../../_components/SideBox/SideBox'
 
 
-export default function page() {
+export default function Page() {
 
     const { params } = useParams()
 
