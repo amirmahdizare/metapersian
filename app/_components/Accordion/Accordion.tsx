@@ -14,11 +14,11 @@ export const Accordion = ({ title, description, items }: { title: string, descri
                 <ChevronUp width={12} height={12} className={` transition-all duration-300 ${open ? 'rotate-180' : ''}`} />
             </div>
 
-            <div className={` transition-all flex flex-col gap-6 duration-300 text-dark-tex-gray ${open ? 'max-h-[1000px] opacity-1' : 'max-h-0 overflow-hidden opacity-0'}`}>
-                <p className='font-light'>{description}</p>
+            <div className={` transition-all flex flex-col gap-6 duration-300 text-dark-tex-gray ${open ? 'max-h-[10000px] opacity-1' : 'max-h-0 overflow-hidden opacity-0'}`}>
+                <p className='font-light' dangerouslySetInnerHTML={{__html:description}}/>
                 {items?.map(item => <p key={item.title} className='inline' >
                     <span className='font-bold text-white inline'>{item.title} : </span>
-                    <p className='text-dark-tex-gray inline font-light leading-10'>{item.description}</p>
+                    <p className='text-dark-tex-gray inline font-light leading-10' dangerouslySetInnerHTML={{__html:description}}/>
                 </p>)}
             </div>
 
