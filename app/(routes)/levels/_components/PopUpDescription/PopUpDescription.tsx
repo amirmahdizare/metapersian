@@ -17,9 +17,9 @@ export const PopUpDescription = ({ description, children }: { description: strin
                 {children}
             </div>
 
-            {open && <div className='fixed top-28 left-0 backdrop-brightness-[25%]  p-4 h-screen w-screen'>
+            {open && <div className='fixed top-28 left-0 backdrop-brightness-[25%] z-30   p-4 h-screen w-screen'>
                 <ClickAwayListener onClickAway={() => setOpen(false)}>
-                    <div className='rounded-app border-gray-400 p-8 flex flex-col gap-4 max-w-screen-sm border overflow-auto bg-dark-on-bg text-gray-400'>
+                    <div className='rounded-app border-gray-400 p-8 flex flex-col gap-4 max-w-screen-sm border overflow-auto h-full bg-dark-on-bg text-gray-400'>
                         <div className='flex flex-row gap-2 justify-between'>
                             <span className='text-2xl'>توضیحات :</span>
                             <Close className='text-gray-400 cursor-pointer' width={17} height={17} onClick={() => setOpen(false)} />
