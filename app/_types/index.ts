@@ -114,3 +114,26 @@ export interface LevelGemType {
     encryption: number
     designer: string
 }
+
+export interface LevelGiftType {
+    id: number
+    level_id: number
+    name: string
+    description: string
+    monthly_capacity_count: number
+    store_capacity: number
+    sell_capacity: number
+    features: string
+    sell: number
+    vod_document_registration: number
+    seller_link: string
+    designer: string
+    three_d_model_volume: string
+    three_d_model_points: number
+    three_d_model_lines: number
+    has_animation: number
+    png_file: string
+    fbx_file: string
+    gif_file: string
+    rent: number
+}
