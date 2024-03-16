@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+'use client'
 import { SideMenu } from "./_components/SideMenu/SideMenu";
 import { FooterSymbols } from "./_components/FooterSymbols/FooterSymbols";
 import { Features } from "./_components/Features/Features";
 import { Footer } from "./_components/Footer/Footer";
 import { ResponsiveHeader } from "./_components/ResponsiveHeader/ResponsiveHeader";
+import { QueryClient, QueryClientProvider } from "react-query";
 
 
 export default function RootLayout({
@@ -12,21 +13,26 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
 
+    const queryClient = new QueryClient();
 
     return (
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-14 xl:gap-16 bg-black pt-32 lg:pt-6  p-6 justify-center ">
+        <QueryClientProvider client={queryClient}>
 
-            <ResponsiveHeader title="سطح خبرنگار یک" />
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-14 xl:gap-16 bg-black pt-32 lg:pt-6  p-6 justify-center ">
 
-            <div className="hidden lg:flex  h- screen z-10"><SideMenu /></div>
+                <ResponsiveHeader title="سطح خبرنگار یک" />
 
-            <div className="flex flex-col gap-8 flex-1 items-start w-full max-w-[1650px] font-normal">
-                {children}
-                <Features />
-                <FooterSymbols />
-                <Footer />
+                <div className="hidden lg:flex  h- screen z-10"><SideMenu /></div>
+
+                <div className="flex flex-col gap-8 flex-1 items-start w-full max-w-[1650px] font-normal">
+                    {children}
+                    <Features />
+                    <FooterSymbols />
+                    <Footer />
+                </div>
+
             </div>
+        </QueryClientProvider>
 
-        </div>
     );
 }
