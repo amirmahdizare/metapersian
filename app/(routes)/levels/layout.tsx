@@ -13,7 +13,15 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
 
-    const queryClient = new QueryClient();
+    const queryClient = new QueryClient({
+        defaultOptions: {
+            queries: {
+                refetchInterval: 1000 * 30 * 60,
+                refetchOnWindowFocus: false,
+                retry:false
+            }
+        }
+    });
 
     return (
         <QueryClientProvider client={queryClient}>
