@@ -11,76 +11,104 @@ import cityCouncil from '@images/menuImages/city-council-baguette.png'
 import mayor from '@images/menuImages/the-mayor-baguette.png'
 import governer from '@images/menuImages/governor-baguette.png'
 import miniester from '@images/menuImages/minister-baguette.png'
+import judge from '@images/menuImages/judge-baguette.png'
+import legister from '@images/menuImages/legislator-baguette.png'
 
 export const routes: Array<MenuItemType> = [
     {
         faTitle: 'صفحه نخست',
         route:'home',
-        img: home
+        img: home,
+        id:0
     },
     {
         faTitle: 'شهروند',
         route:'citizen',
-        img: citizen
+        img: citizen,
+        id:1
     },
     {
         faTitle: 'خبرنگار',
         img: reporter,
-        route:'reporter'
+        route:'reporter',
+        id:2
     },
     {
         faTitle:'مشارکت کننده',
         img:participation,
-        route:'participation'
+        route:'participation',
+        id:3
     },
     {
         faTitle:'توسعه دهنده',
         img:developer,
-        route:'developer'
+        route:'developer',
+        id:4
     }
     ,
     {
         faTitle:'بازرس',
         img:inspector,
-        route:'inspector'
+        route:'inspector',
+        id:5
     },
 
     {
         faTitle:'تاجر',
         img:bussiness,
-        route:'bussiness'
+        route:'bussiness',
+        id:6
     },
 
 
     {
         faTitle:'وکیل',
         img:lawyer,
-        route:'lawyer'
+        route:'lawyer',
+        id:7
     },
 
     {
         faTitle:'شورای شهر',
         img:cityCouncil,
-        route:'citycouncil'
+        route:'citycouncil',
+        id:8
     },
 
     {
         faTitle:'شهردار',
         img:mayor,
-        route:'mayor'
+        route:'mayor',
+        id:9
     },
 
 
     {
         faTitle:'استاندار',
         img:governer,
-        route:'governer'
+        route:'governer',
+        id:10
     },
 
     {
         faTitle:'وزیر',
         img:miniester,
-        route:'miniester'
+        route:'miniester',
+        id:11
+    },
+
+    {
+        faTitle:'قاضی',
+        img:judge,
+        route:'judge',
+        id:12
+    },
+
+    {
+        faTitle:'وزیر',
+        img:legister,
+        route:'legister',
+        id:13
     },
 
 ]

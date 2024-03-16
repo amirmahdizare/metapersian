@@ -65,7 +65,7 @@ export const SideMenu = ({ isMobile }: { isMobile?: boolean }) => {
 
             {data?.data?.data.map(route => <Link key={route.id} href={`/levels/${route.id}`} className={`flex flex-row gap-2.5  items-center rounded-app relative hover:bg-black   transition-all duration-200 cursor-pointer p-2.5 hover:text-dark-active-btn ${segment == route.id ? 'text-dark-active-btn bg-black rounded-r-app' : ''} `}>
               {segment == route.id && <div className='absolute h-[calc(100%-6px)] top-1/2 -translate-y-1/2 rounded-l-app bg-dark-active-btn w-1 right-0 '></div>}
-              <Image src={route.background_image} height={23} width={23} alt={route.name} className='rounded' />
+              <Image src={routes.find(r=>r.id.toString()==route.id)?.img ?? route.background_image} height={23} width={23} alt={route.name} className='rounded' />
               {expaned && <span>{route.name}</span>}
 
             </Link>)}
