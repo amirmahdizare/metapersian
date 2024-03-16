@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { useParams, usePathname, useSelectedLayoutSegment, useSelectedLayoutSegments } from 'next/navigation'
 import React from 'react'
 
 export const TabSelector = () => {
@@ -8,9 +8,13 @@ export const TabSelector = () => {
 
     const pathname = usePathname()
 
+    const { params } = useParams()
+
+    const slug = params[0]
+
 
     const ButtonLink = ({ title, link }: { title: string, link: string }) => {
-        return <Link href={`/levels/reporter${link}`} className={pathname.includes(link) ? 'text-dark-active-btn border-b-2 border-dark-active-btn p-3 pb-2.5 font-bold' : ' border-b-2 border-transparent p-3 pb-2.5'}>
+        return <Link href={`/levels/${slug}${link}`} className={pathname.includes(link) ? 'text-dark-active-btn border-b-2 border-dark-active-btn p-3 pb-2.5 font-bold' : ' border-b-2 border-transparent p-3 pb-2.5'}>
             {title}
         </Link>
     }
