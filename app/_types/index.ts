@@ -86,3 +86,14 @@ export interface LevelLicenceType {
     create_challenge_questions: number
     upload_music: number
 }
+
+export interface LevelPricesType {
+    id: number
+    level_id: number
+    psc: number
+    yellow: number
+    blue: number
+    red: number
+    effect: number
+    satisfaction: number
+}

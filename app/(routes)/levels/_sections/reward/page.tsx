@@ -1,41 +1,64 @@
+'use client'
+
 import React from 'react'
 import { DetailItem } from '@components'
-import { rewards } from './data.mock'
 import { ButtonList } from '../components/ButtonList'
 import { TabSelector } from '../components/TabSelector'
 import { SectionName } from '../components/SectionName'
+import { useParams } from 'next/navigation'
+import { UseLevelSectionData } from '@/app/_hooks'
+import {  LevelPricesType } from '@/app/_types'
+import { Spinner } from '@/app/_assets/_icons'
 
 export default function page() {
-    return (
-        <div className='grid grid-cols-2 gap-4 rounded-app2 bg-dark-section-color p-4 '>
 
-            <div className=' col-span-3 lg:hidden order-1'><TabSelector /></div>
+    const { params } = useParams()
 
-            <div className='col-span-3 lg:col-span-2 flex flex-col gap-4 order-2'>
-
-                <div className='lg:flex flex-row gap-2 justify-between items-center hidden'>
-                    <SectionName />
-                    <ButtonList />
-                </div>
-
-                <div className='hidden lg:flex'><TabSelector /></div>
-
-                <div className='flex flex-col gap-4 text-xl'>
+    const { data, isError } = UseLevelSectionData<LevelPricesType>(params[0], 'prize')
 
 
+    if (data?.data.data) {
 
-                    <div className='grid grid-cols-2 gap-4 lg:gap-12'>
-                        {Object.values(rewards.items.reduce<{ [key: string]: Array<{ title: string, value: any, col: number, span?: number }> }>((pv, cv) => {
-                            return ({ ...pv, [cv.colNumber]: [...(pv?.[cv.colNumber] ?? []), cv] })
-                        }, {})).map((item, index) => <div key={index} className={`flex flex-col gap-4 ${item.findIndex(i => i.span == 2) != -1 ? 'col-span-2' : 'col-span-2 xl:col-span-1'}  `}>
-                            {item?.map(i => <DetailItem key={i.title} {...i} />)}
-                        </div>)}
+        const { blue, effect, id, level_id, psc, red, satisfaction, yellow } = data?.data?.data
+
+        return (
+            <div className='grid grid-cols-2 gap-4 rounded-app2 bg-dark-section-color p-4 lg:min-w-[900px] '>
+
+                <div className=' col-span-3 lg:hidden order-1'><TabSelector /></div>
+
+                <div className='col-span-3 lg:col-span-2 flex flex-col gap-4 order-2'>
+
+                    <div className='lg:flex flex-row gap-2 justify-between items-center hidden'>
+                        <SectionName />
+                        <ButtonList />
+                    </div>
+
+                    <div className='hidden lg:flex'><TabSelector /></div>
+
+                    <div className='flex flex-col lg:flex-row gap-4 text-xl justify-evenly'>
+
+                        <div className={`flex flex-col gap-4 col-span-2 xl:col-span-1  flex-1`}>
+                            <DetailItem title='دریافت PSC' value={psc} />
+                            <DetailItem title='دریافت رنگ آبی' value={blue} />
+                            <DetailItem title='دریافت رنگ زرد' value={yellow} />
+                        </div>
+
+                        <div className={`flex flex-col gap-4 col-span-2 xl:col-span-1  flex-1`}>
+                            <DetailItem title='دریافت رنگ قرمز' value={red} />
+                            <DetailItem title='واحد رضایت' value={satisfaction} />
+                            <DetailItem title='اثر' value={effect} />
+                        </div>
 
                     </div>
                 </div>
+
+
             </div>
+        )
 
+    }
+    else if (isError)
+        return <div className='h-28 w-full flex justify-center items-center'>خطا در دریافت اطلاعات</div>
 
-        </div>
-    )
+    return <div className='h-28 w-full flex justify-center items-center'><Spinner width={30} height={30} /></div>
 }
