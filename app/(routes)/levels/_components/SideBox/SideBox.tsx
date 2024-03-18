@@ -57,11 +57,11 @@ export const SideBox = () => {
             return (
                 <div className='flex flex-col gap-6 justify-between'>
 
-                    {mode == 'gif' && <div className='h-[400px] lg:h-[550px] relative'><Image className='object-cover' alt='gif' src={selectedSlugData?.gif_file} fill /></div>}
+                    <div className={`h-[400px] lg:h-[550px] relative ${mode=='gif' ? ''  :'hidden'}`}><Image className='object-cover' alt='gif' src={selectedSlugData?.gif_file} fill /></div>
 
-                    {mode == 'png' && <div className='h-[400px] lg:h-[550px] relative  '><Image className=' object-cover' alt='png' src={selectedSlugData?.png_file} fill /></div>}
+                    <div className={`h-[400px] lg:h-[550px] relative  ${mode=='png' ? ''  :'hidden'}`}><Image className=' object-cover' alt='png' src={selectedSlugData?.png_file} fill /></div>
 
-                    {mode == 'fbx' && <div className='h-[450px] lg:h-[550px] relative flex justify-center items-center '><Sample3D url={selectedSlugData?.fbx_file} /></div>}
+                    <div className={`h-[450px] lg:h-[550px] relative flex justify-center items-center ${mode=='fbx' ? ''  :'hidden'}`}><Sample3D url={selectedSlugData?.fbx_file} /></div>
 
                     <div className='flex flex-row justify-around lg:justify-center gap-8'>
                         {!!selectedSlugData?.png_file && <CustomButton fieldKey='png' title='PNG' />}
