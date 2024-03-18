@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex flex-row p-1 justify-center items-center h-screen">
 
-      <Link href={'/levels'} >رفتن به صفحه سطوح</Link>
+      <Link href={'/levels'} prefetch={false} >رفتن به صفحه سطوح</Link>
       {/* <SideMenu /> */}
     </main>
   );
