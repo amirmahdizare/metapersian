@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { infoData } from './data.mock'
-import { DetailItem } from '@components'
+import { Accordion, DetailItem } from '@components'
 import { TabSelector } from '../components/TabSelector'
 import { ButtonList } from '../components/ButtonList'
 import { SideBox } from '../../_components/SideBox/SideBox'
@@ -43,10 +43,7 @@ export default function Page() {
                     <div className='flex flex-col gap-4 text-xl'>
 
                         <div className='lg:flex flex-col gap-2 hidden'>
-                            <span className='text-white'>توضیحات:</span>
-
-                            <p className='text-gray-300 leading-9' dangerouslySetInnerHTML={{ __html: description }} />
-
+                            <Accordion description={description} title={'توضیحات'} />
                         </div>
 
                         <PopUpDescription description={description} >

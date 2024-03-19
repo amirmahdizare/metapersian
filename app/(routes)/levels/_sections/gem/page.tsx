@@ -43,10 +43,8 @@ export default function Page() {
 
 
                         <div className='lg:flex flex-col gap-2 hidden'>
-                            <span className='text-white'>توضیحات:</span>
-
-                            <p className='text-gray-300 leading-9' dangerouslySetInnerHTML={{ __html: description }} />
-
+                            <Accordion description={description} title={'توضیحات'} />
+                            <Divider/>
                         </div>
 
                         <PopUpDescription description={description} >
@@ -73,7 +71,7 @@ export default function Page() {
                             </div>
 
                         </div>
-                    
+
                     </div>
 
                 </div>
