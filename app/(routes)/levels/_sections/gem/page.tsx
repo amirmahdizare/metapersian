@@ -30,7 +30,7 @@ export default function Page() {
 
                 <div className=' col-span-3 lg:hidden order-1'><TabSelector /></div>
 
-                <div className='col-span-3 lg:col-span-2 flex flex-col gap-4 order-2'>
+                <div className='col-span-3 lg:col-span-2 flex flex-col gap-4 order-2 lg:min-w-[1080px]'>
 
                     <div className='lg:flex flex-row gap-2 justify-between items-center hidden'>
                         <SectionName />
