@@ -9,7 +9,7 @@ import { redirect } from 'next/navigation'
 
 export default function page({ params: { params } }: LevelPageProps) {
 
-    if (params[1] == 'info')
+    if (params[1] == 'general-info')
         return <InfoPage />
 
     else if (params[1] == 'gem')
@@ -25,6 +25,6 @@ export default function page({ params: { params } }: LevelPageProps) {
         return <RewardPage />
 
     return (
-        redirect(`${params}/info`)
+        redirect(`${params}/general-info`)
     )
 }
