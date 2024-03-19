@@ -10,7 +10,7 @@ import { useParams } from 'next/navigation'
 import { UseLevelSectionData, UseLevelsData } from '@/app/_hooks'
 import { Spinner } from '@/app/_assets/_icons'
 import { BaseLevelSection, LevelSectionKey } from '@/app/_types'
-
+import ErrorBoundary from './ErrorBoundary'
 
 type modes = 'gif' | 'fbx' | 'png'
 
@@ -24,7 +24,7 @@ export const SideBox = () => {
 
     const { data, isError } = UseLevelsData()
 
-    const { data: sectionData, } = UseLevelSectionData<BaseLevelSection>(slug,  section)
+    const { data: sectionData, } = UseLevelSectionData<BaseLevelSection>(slug, section)
 
     const [mode, setMode] = useState<modes>('png')
 
@@ -64,13 +64,18 @@ export const SideBox = () => {
         if (gifSrc || pngSrc || fbxSrc)
 
             return (
+
                 <div className='flex flex-col gap-6 justify-between'>
 
                     {gifSrc && <div className={`h-[400px] lg:h-[550px] relative ${mode == 'gif' ? '' : 'hidden'}`}><Image className='object-cover' alt='gif' src={gifSrc} fill /></div>}
 
                     {pngSrc && <div className={`h-[400px] lg:h-[550px] relative  ${mode == 'png' ? '' : 'hidden'}`}><Image className=' object-cover' alt='png' src={pngSrc} fill /></div>}
 
-                    {fbxSrc && <div className={`h-[450px] lg:h-[550px] relative flex justify-center items-center ${mode == 'fbx' ? '' : 'hidden'}`}><Sample3D url={fbxSrc} /></div>}
+                    {typeof fbxSrc=='string' && <div className={`h-[450px] lg:h-[550px] relative flex justify-center items-center ${mode == 'fbx' ? '' : 'hidden'}`}>
+                        <ErrorBoundary>
+                            <Sample3D url={fbxSrc as any} />
+                        </ErrorBoundary>
+                    </div>}
 
                     <div className='flex flex-row justify-around lg:justify-center gap-8'>
                         {!!pngSrc && <CustomButton fieldKey='png' title='PNG' />}
