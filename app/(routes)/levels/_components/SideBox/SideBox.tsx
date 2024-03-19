@@ -7,8 +7,9 @@ import png from '@images/bugguet/sample.png'
 
 import { Sample3D } from '@components'
 import { useParams } from 'next/navigation'
-import { UseLevelsData } from '@/app/_hooks'
+import { UseLevelSectionData, UseLevelsData } from '@/app/_hooks'
 import { Spinner } from '@/app/_assets/_icons'
+import { BaseLevelSection, LevelSectionKey } from '@/app/_types'
 
 
 type modes = 'gif' | 'fbx' | 'png'
@@ -19,9 +20,11 @@ export const SideBox = () => {
 
     const slug = params[0]
 
+    const section = params[1] as LevelSectionKey
+
     const { data, isError } = UseLevelsData()
 
-
+    const { data: sectionData, } = UseLevelSectionData<BaseLevelSection>(slug,  section)
 
     const [mode, setMode] = useState<modes>('png')
 
@@ -48,25 +51,31 @@ export const SideBox = () => {
         {title}
     </button>, [mode])
 
+
+
     if (data?.data?.data) {
 
         const selectedSlugData = data?.data?.data.find(d => d.id == slug)
 
-        if (selectedSlugData?.fbx_file || selectedSlugData?.gif_file || selectedSlugData?.png_file)
+        const gifSrc = section == 'general-info' ? selectedSlugData?.gif_file : sectionData?.data?.data?.gif_file
+        const pngSrc = section == 'general-info' ? selectedSlugData?.png_file : sectionData?.data?.data?.png_file
+        const fbxSrc = section == 'general-info' ? selectedSlugData?.fbx_file : sectionData?.data?.data?.fbx_file
+
+        if (gifSrc || pngSrc || fbxSrc)
 
             return (
                 <div className='flex flex-col gap-6 justify-between'>
 
-                    <div className={`h-[400px] lg:h-[550px] relative ${mode=='gif' ? ''  :'hidden'}`}><Image className='object-cover' alt='gif' src={selectedSlugData?.gif_file} fill /></div>
+                    {gifSrc && <div className={`h-[400px] lg:h-[550px] relative ${mode == 'gif' ? '' : 'hidden'}`}><Image className='object-cover' alt='gif' src={gifSrc} fill /></div>}
 
-                    <div className={`h-[400px] lg:h-[550px] relative  ${mode=='png' ? ''  :'hidden'}`}><Image className=' object-cover' alt='png' src={selectedSlugData?.png_file} fill /></div>
+                    {pngSrc && <div className={`h-[400px] lg:h-[550px] relative  ${mode == 'png' ? '' : 'hidden'}`}><Image className=' object-cover' alt='png' src={pngSrc} fill /></div>}
 
-                    <div className={`h-[450px] lg:h-[550px] relative flex justify-center items-center ${mode=='fbx' ? ''  :'hidden'}`}><Sample3D url={selectedSlugData?.fbx_file} /></div>
+                    {fbxSrc && <div className={`h-[450px] lg:h-[550px] relative flex justify-center items-center ${mode == 'fbx' ? '' : 'hidden'}`}><Sample3D url={fbxSrc} /></div>}
 
                     <div className='flex flex-row justify-around lg:justify-center gap-8'>
-                        {!!selectedSlugData?.png_file && <CustomButton fieldKey='png' title='PNG' />}
-                        {!!selectedSlugData?.fbx_file && <CustomButton fieldKey='fbx' title='FBX' />}
-                        {!!selectedSlugData?.gif_file && <CustomButton fieldKey='gif' title='GIF' />}
+                        {!!pngSrc && <CustomButton fieldKey='png' title='PNG' />}
+                        {!!fbxSrc && <CustomButton fieldKey='fbx' title='FBX' />}
+                        {!!gifSrc && <CustomButton fieldKey='gif' title='GIF' />}
                     </div>
 
                 </div>

@@ -32,7 +32,7 @@ export type pageProps<PT = {}, SP = {}> = {
     }
 }
 
-export type LevelPageProps = pageProps<{ params: [string, 'info' | 'gift' | 'permissions' | 'reward' | 'gem'] }>
+export type LevelPageProps = pageProps<{ params: [string, 'general-info' | 'gift' | 'permissions' | 'reward' | 'gem'] }>
 
 export interface LevelItemType {
     id: string,
@@ -48,7 +48,13 @@ export interface LevelItemType {
 
 export type LevelSectionKey = 'general-info' | 'gem' | 'gift' | 'licenses' | 'prize'
 
-export interface LeveLInfoType {
+export interface BaseLevelSection {
+    png_file?: string
+    fbx_file?: string
+    gif_file?: string
+}
+
+export interface LeveLInfoType  extends BaseLevelSection{
     id: number
     score: number
     description: string
@@ -66,7 +72,7 @@ export interface LeveLInfoType {
     creation_date: string
 }
 
-export interface LevelLicenceType {
+export interface LevelLicenceType  extends BaseLevelSection{
     id: number
     level_id: number
     create_union: number
@@ -88,7 +94,7 @@ export interface LevelLicenceType {
     upload_music: number
 }
 
-export interface LevelPricesType {
+export interface LevelPricesType  extends BaseLevelSection{
     id: number
     level_id: number
     psc: number
@@ -99,7 +105,7 @@ export interface LevelPricesType {
     satisfaction: number
 }
 
-export interface LevelGemType {
+export interface LevelGemType  extends BaseLevelSection{
     id: number
     level_id: number
     name: string
@@ -110,13 +116,11 @@ export interface LevelGemType {
     color: string
     has_animation: number
     lines: number
-    png_file: string
-    fbx_file: string
     encryption: number
     designer: string
 }
 
-export interface LevelGiftType {
+export interface LevelGiftType  extends BaseLevelSection {
     id: number
     level_id: number
     name: string
@@ -133,8 +137,5 @@ export interface LevelGiftType {
     three_d_model_points: number
     three_d_model_lines: number
     has_animation: number
-    png_file: string
-    fbx_file: string
-    gif_file: string
     rent: number
 }
