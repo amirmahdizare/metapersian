@@ -21,7 +21,7 @@ export const TabSelector = () => {
 
 
     return (
-        <div className="bg-dark-on-bg rounded-app  flex lg:justify-evenly whitespace-nowrap  flex-row gap-4 w-full text-[#868B90] overflow-auto ">
+        <div className="bg-dark-on-bg rounded-app  flex lg:justify-evenly whitespace-nowrap  flex-row gap-4 w-full text-[#868B90] overflow-auto no-scrollbar ">
             <ButtonLink title="اطلاعات اولیه سطح" link="/general-info" />
             <ButtonLink title="مجوز ها و دسترسی ها" link="/permissions" />
             <ButtonLink title="نگین سطح" link="/gem" />
