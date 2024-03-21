@@ -8,15 +8,10 @@ export const PopUpDescription = ({ description, children }: { description: strin
     const [open, setOpen] = useState<boolean>(false)
 
     useEffect(() => {
-        console.log(document.body)
-        if (open) {
-            document.body.style.overflow = 'hidden'
-            document.body.style.height = '100px'
-        }
-        else {
-            document.body.style.height = 'unset'
-            document.body.style.overflow = 'unset'
-        }
+        if (open)
+            document.body.classList.add('h-[100px]', 'overflow-hidden', 'lg:h-full', 'lg:overflow-auto')
+        else
+            document.body.classList.remove('h-[100px]', 'overflow-hidden', 'lg:h-full', 'lg:overflow-auto')
     },
         [open])
 
@@ -30,7 +25,7 @@ export const PopUpDescription = ({ description, children }: { description: strin
                 {children}
             </div>
 
-            {open && <div className='fixed top-24 left-0 backdrop-brightness-[25%] z-30   p-4 h-screen w-screen'>
+            {open && <div className='fixed top-24 left-0 backdrop-brightness-[25%] z-30   p-4 h-screen w-screen '>
                 <ClickAwayListener onClickAway={() => setOpen(false)}>
                     <div className='rounded-app border-gray-400 p-8 flex flex-col gap-4 no-scrollbar max-w-screen-sm border overflow-auto max-h-[calc(100%-100px)] bg-dark-on-bg text-gray-400'>
                         <div className='flex flex-row gap-2 justify-between'>
